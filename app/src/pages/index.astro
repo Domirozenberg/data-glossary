@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import topicsData from '../data/topics.json';
+const { categories } = topicsData;
+---
+
+<Layout title="Data Pipeline Glossary">
+  <h1>Data Pipeline Glossary</h1>
+  <p style="color: var(--color-muted); margin-bottom: 2rem;">
+    Browse topics by category. Each topic is a one-page explanation of a key concept in data pipelines.
+  </p>
+  <ul style="list-style: none; padding: 0; margin: 0;">
+    {categories.map((cat) => (
+      <li style="margin-bottom: 1rem;">
+        <a href={`/category/${cat.id}`} class="btn" style="display: inline-block;">
+          {cat.label}
+        </a>
+        <span style="color: var(--color-muted); font-size: 0.9rem; margin-left: 0.5rem;">
+          ({cat.topics.length} topics)
+        </span>
+      </li>
+    ))}
+  </ul>
+</Layout>

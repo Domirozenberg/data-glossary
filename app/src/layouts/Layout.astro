@@ -1,0 +1,55 @@
+---
+import '../styles/global.css';
+interface Props {
+  title: string;
+  currentCategory?: string;
+  currentSlug?: string;
+}
+const { title, currentCategory, currentSlug } = Astro.props;
+import topicsData from '../data/topics.json';
+const { categories } = topicsData;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | Data Pipeline Glossary</title>
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <a href="/">Data Pipeline Glossary</a>
+        </div>
+        <nav class="sidebar-nav">
+          {categories.map((cat) => {
+            const isOpen = currentCategory === cat.id;
+            return (
+              <details class="sidebar-category" open={isOpen}>
+                <summary class="sidebar-category-title">{cat.label}</summary>
+                <ul class="sidebar-topic-list">
+                  {cat.topics.map((t) => {
+                    const href = `/topic/${cat.id}/${t.slug}`;
+                    const isCurrent = currentCategory === cat.id && currentSlug === t.slug;
+                    return (
+                      <li>
+                        <a class={`sidebar-nav-link${isCurrent ? ' current' : ''}`} href={href}>
+                          {t.title}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </details>
+            );
+          })}
+        </nav>
+      </aside>
+      <main class="main">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
