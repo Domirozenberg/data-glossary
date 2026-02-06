@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import AskPanel from '../components/AskPanel.astro';
 interface Props {
   title: string;
   currentCategory?: string;
@@ -16,12 +17,16 @@ const { categories } = topicsData;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title} | Data Pipeline Glossary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div class="layout">
       <aside class="sidebar">
         <div class="sidebar-header">
           <a href="/">Data Pipeline Glossary</a>
+          <AskPanel />
         </div>
         <nav class="sidebar-nav">
           {categories.map((cat) => {

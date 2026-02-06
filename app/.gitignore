@@ -3,3 +3,4 @@ dist/
 .astro/
 public/content/
 src/data/topics.json
+.vercel

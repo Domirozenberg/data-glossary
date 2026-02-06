@@ -36,6 +36,34 @@ This glossary provides one-page explanations of key components, steps, and conce
 3. Topics are cross-referenced where relevant
 4. Focus is on concepts, not specific tools
 
+## Pushing changes to the repo
+
+To save and push your work to GitHub (or your Git remote):
+
+1. **Check what changed**
+   ```bash
+   git status
+   ```
+
+2. **Stage changes** (all files, or list specific paths)
+   ```bash
+   git add .
+   # or: git add path/to/file1 path/to/file2
+   ```
+
+3. **Commit with a message**
+   ```bash
+   git commit -m "Short description of what you did"
+   ```
+
+4. **Push to the remote**
+   ```bash
+   git push
+   ```
+   If your branch is new and not yet on the remote: `git push -u origin <branch-name>` (e.g. `git push -u origin main`).
+
+If the project is connected to **Vercel**, pushing to the default branch (usually `main`) will trigger a new deployment. See [app/README.md](app/README.md) for Vercel setup.
+
 ## Web App
 
 A web application in the `app/` folder lets you browse the glossary in a browser, with navigation by category, print/PDF, and download-as-Markdown. See [app/README.md](app/README.md) for setup and deployment (e.g. to Vercel).

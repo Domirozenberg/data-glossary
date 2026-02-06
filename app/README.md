@@ -10,7 +10,7 @@ Web UI for the Data Pipeline Glossary. Browse topics by category, read content, 
    npm install
    ```
 
-2. **Build the topic index** (scans the parent directory for glossary markdown and copies files for download):
+2. **Build the topic index and search index** (scans the parent directory for glossary markdown, writes `src/data/topics.json`, copies files to `public/content/`, and builds `public/search-index.json` for in-app search):
 
    ```bash
    node scripts/build-topics-index.js
@@ -40,11 +40,19 @@ Web UI for the Data Pipeline Glossary. Browse topics by category, read content, 
 4. Deploy. Vercel will run `npm run build` (which runs the topic index script then Astro build).
 5. To protect the site with a password: upgrade to **Vercel Pro** and enable **Password Protection** in the project settings.
 
+### Search the glossary (Q&A without AI)
+
+**Search the glossary** opens a side panel where you type keywords; the app searches all glossary topics **client-side** (no API key, no external service). Results show matching topic titles, categories, and short snippets with links to the topic pages. The search index is built at build time (`public/search-index.json`).
+
+Optional: The repo includes `api/ask.js` for an AI-powered “Ask” flow (sends topic + question to OpenAI). It is **not used** by the current Search UI. If you want to re-enable it later, set `OPENAI_API_KEY` in Vercel and wire the panel back to `/api/ask`.
+
 ## Structure
 
-- `scripts/build-topics-index.js` – Scans `../` for category folders and topic `.md` files; writes `src/data/topics.json` and copies markdown to `public/content/` for “Download as Markdown”.
+- `scripts/build-topics-index.js` – Scans `../` for category folders and topic `.md` files; writes `src/data/topics.json`, copies markdown to `public/content/`, and builds `public/search-index.json` for client-side search.
 - `src/pages/` – Home, category list, and topic pages (static routes).
 - `src/layouts/Layout.astro` – Sidebar navigation and main layout.
 - `src/styles/global.css` – Layout and print styles.
+- `src/components/AskPanel.astro` – “Search the glossary” button and side panel; loads `search-index.json` and runs client-side keyword search (no API key).
+- `api/ask.js` – Optional Vercel serverless function for AI answers (OpenAI). Not used by the current Search UI; keep for future use if desired.
 
 Topic content is read from the parent glossary directory at build time (e.g. `../architecture/data-pipeline-architecture.md`), so the repo root must be the glossary when building.

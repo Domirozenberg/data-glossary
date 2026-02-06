@@ -30,6 +30,7 @@ const CATEGORY_LABELS = {
   'conversational-analytics': 'Conversational Analytics',
   'analytics': 'Analytics & Business Intelligence',
   'cross-cutting': 'Cross-Cutting Topics',
+  'version-control': 'Version Control & Git',
 };
 
 function getTitleFromFile(filePath) {
@@ -45,6 +46,19 @@ function getTitleFromFile(filePath) {
 
 function slugFromFilename(name) {
   return name.replace(/\.md$/, '');
+}
+
+/** Simple markdown to plain text for search index */
+function mdToPlainText(md) {
+  return md
+    .replace(/^#+\s+/gm, ' ')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/\n+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function buildIndex() {
@@ -101,6 +115,31 @@ function buildIndex() {
     }
   }
   console.log('Copied topic markdown to public/content/');
+
+  // Build search index (title + plain text per topic) for client-side Q&A
+  const searchIndex = [];
+  for (const cat of categories) {
+    for (const t of cat.topics) {
+      const src = path.join(GLOSSARY_ROOT, cat.id, t.slug + '.md');
+      let text = '';
+      try {
+        const raw = fs.readFileSync(src, 'utf-8');
+        text = mdToPlainText(raw);
+      } catch {
+        text = t.title;
+      }
+      searchIndex.push({
+        categoryId: cat.id,
+        categoryLabel: cat.label,
+        slug: t.slug,
+        title: t.title,
+        text: text.slice(0, 50000),
+      });
+    }
+  }
+  const searchPath = path.join(APP_DIR, 'public', 'search-index.json');
+  fs.writeFileSync(searchPath, JSON.stringify(searchIndex), 'utf-8');
+  console.log('Wrote', searchPath, '—', searchIndex.length, 'topics');
 }
 
 buildIndex();
