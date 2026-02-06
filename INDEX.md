@@ -404,6 +404,17 @@ Quick navigation to all topics organized by category.
 - Data Pipeline Cost Optimization
 - Data Pipeline Migration Strategies
 
+## Version Control & Git
+
+- [Git and GitHub](./version-control/git-and-github.md)
+- [Git Repository and Workflow](./version-control/git-repository-and-workflow.md)
+- [Git Clone and Remotes](./version-control/git-clone-and-remotes.md)
+- [Git Commit and Status](./version-control/git-commit-and-status.md)
+- [Git Push and Pull](./version-control/git-push-and-pull.md)
+- [Git Branches](./version-control/git-branches.md)
+- [Git Merge](./version-control/git-merge.md)
+- [GitHub Pull Requests](./version-control/github-pull-requests.md)
+
 ---
 
 *Note: Topics in bold are completed. Others are placeholders for future content.*

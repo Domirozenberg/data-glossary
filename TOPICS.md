@@ -426,3 +426,14 @@
 - [ ] Data Pipeline Documentation
 - [ ] Data Pipeline Cost Optimization
 - [ ] Data Pipeline Migration Strategies
+
+## Version Control & Git
+
+- [x] Git and GitHub
+- [x] Git Repository and Workflow
+- [x] Git Clone and Remotes
+- [x] Git Commit and Status
+- [x] Git Push and Pull
+- [x] Git Branches
+- [x] Git Merge
+- [x] GitHub Pull Requests
