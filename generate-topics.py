@@ -55,9 +55,30 @@ TEMPLATE = """# {title}
 **Last Updated**: {year}
 """
 
+# Map TOPICS.md section headers to category folder names
+SECTION_TO_FOLDER = {
+    'architecture-&-design-patterns': 'architecture',
+    'data-ingestion': 'ingestion',
+    'data-storage': 'storage',
+    'database-types-&-technologies': 'databases',
+    'data-transformation': 'transformation',
+    'data-modeling': 'modeling',
+    'data-quality-&-validation': 'quality',
+    'data-orchestration': 'orchestration',
+    'data-formats-&-serialization': 'formats',
+    'data-governance': 'governance',
+    'data-observability': 'observability',
+    'advanced-concepts': 'advanced',
+    'ai-&-machine-learning': 'ai-ml',
+    'conversational-analytics': 'conversational-analytics',
+    'analytics-&-business-intelligence': 'analytics',
+    'cross-cutting-topics': 'cross-cutting',
+    'version-control-&-git': 'version-control',
+}
+
 def slugify(text):
     """Convert text to URL-friendly slug"""
-    return text.lower().replace(' ', '-').replace('(', '').replace(')', '').replace('/', '-')
+    return text.lower().replace(' ', '-').replace('(', '').replace(')', '').replace(',', '').replace('/', '-').replace('&', '')
 
 def update_topics_md(topic_title):
     """Update TOPICS.md to mark topic as completed"""
@@ -166,10 +187,10 @@ def generate_from_list(topics_file):
             if not line or line.startswith('#'):
                 # Check if it's a category header
                 if line.startswith('## '):
-                    current_category = line.replace('## ', '').lower().replace(' ', '-')
-                    # Handle subcategories
-                    if '/' in current_category:
-                        current_category = current_category.split('/')[0]
+                    raw = line.replace('## ', '').lower().replace(' ', '-')
+                    if '/' in raw:
+                        raw = raw.split('/')[0]
+                    current_category = SECTION_TO_FOLDER.get(raw, raw.replace('&', ''))
                 continue
             
             # Skip list markers and completed items

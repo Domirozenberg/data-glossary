@@ -175,156 +175,156 @@ Quick navigation to all topics organized by category.
 
 ## Data Quality & Validation
 
-- Data Completeness
-- Data Accuracy
-- Data Consistency
-- Data Validity
-- Data Timeliness
-- Data Uniqueness
-- Data Integrity
+- [Data Completeness](quality/data-completeness.md)
+- [Data Accuracy](quality/data-accuracy.md)
+- [Data Consistency](quality/data-consistency.md)
+- [Data Validity](quality/data-validity.md)
+- [Data Timeliness](quality/data-timeliness.md)
+- [Data Uniqueness](quality/data-uniqueness.md)
+- [Data Integrity](quality/data-integrity.md)
 - [Data Profiling](./quality/data-profiling.md)
-- Data Validation Rules
-- Data Quality Metrics
-- Data Quality Monitoring
-- Anomaly Detection
-- Data Quality Scoring
-- Data Quality Gates
+- [Data Validation Rules](quality/data-validation-rules.md)
+- [Data Quality Metrics](quality/data-quality-metrics.md)
+- [Data Quality Monitoring](quality/data-quality-monitoring.md)
+- [Anomaly Detection](quality/anomaly-detection.md)
+- [Data Quality Scoring](quality/data-quality-scoring.md)
+- [Data Quality Gates](quality/data-quality-gates.md)
 
 ## Data Orchestration
 
 - [Pipeline Orchestration](./orchestration/pipeline-orchestration.md)
-- Workflow Scheduling
-- Dependency Management
-- Task Dependencies
-- Pipeline Triggers
-- Error Handling
-- Retry Strategies
-- Circuit Breakers
-- Sequential Execution
-- Parallel Execution
-- Conditional Execution
-- Loop Patterns
-- Fan-out/Fan-in Patterns
-- Pipeline Chaining
+- [Workflow Scheduling](orchestration/workflow-scheduling.md)
+- [Dependency Management](orchestration/dependency-management.md)
+- [Task Dependencies](orchestration/task-dependencies.md)
+- [Pipeline Triggers](orchestration/pipeline-triggers.md)
+- [Error Handling](orchestration/error-handling.md)
+- [Retry Strategies](orchestration/retry-strategies.md)
+- [Circuit Breakers](orchestration/circuit-breakers.md)
+- [Sequential Execution](orchestration/sequential-execution.md)
+- [Parallel Execution](orchestration/parallel-execution.md)
+- [Conditional Execution](orchestration/conditional-execution.md)
+- [Loop Patterns](orchestration/loop-patterns.md)
+- [Fan-out/Fan-in Patterns](orchestration/fan-out-fan-in-patterns.md)
+- [Pipeline Chaining](orchestration/pipeline-chaining.md)
 
 ## Data Formats & Serialization
 
-- JSON
-- Avro
+- [JSON](formats/json.md)
+- [Avro](formats/avro.md)
 - [Parquet](./formats/parquet.md)
-- ORC
-- CSV
-- XML
-- Protocol Buffers
-- Delta Format
+- [ORC](formats/orc.md)
+- [CSV](formats/csv.md)
+- [XML](formats/xml.md)
+- [Protocol Buffers](formats/protocol-buffers.md)
+- [Delta Format](formats/delta-format.md)
 - [Schema Evolution](./transformation/schema-evolution.md)
-- Backward Compatibility
-- Forward Compatibility
-- Schema Registry
-- Data Compression
-- Data Encoding
+- [Backward Compatibility](formats/backward-compatibility.md)
+- [Forward Compatibility](formats/forward-compatibility.md)
+- [Schema Registry](formats/schema-registry.md)
+- [Data Compression](formats/data-compression.md)
+- [Data Encoding](formats/data-encoding.md)
 
 ## Data Governance
 
 - [Data Catalog](./governance/data-catalog.md)
-- Data Lineage
-- Data Dictionary
-- Metadata Management
-- Data Classification
-- Data Ownership
-- Data Stewardship
-- Data Privacy
-- Data Encryption (at rest, in transit)
-- Access Control
-- Data Masking
-- PII Handling
-- GDPR Compliance
+- [Data Lineage](governance/data-lineage.md)
+- [Data Dictionary](governance/data-dictionary.md)
+- [Metadata Management](governance/metadata-management.md)
+- [Data Classification](governance/data-classification.md)
+- [Data Ownership](governance/data-ownership.md)
+- [Data Stewardship](governance/data-stewardship.md)
+- [Data Privacy](governance/data-privacy.md)
+- [Data Encryption (at rest, in transit)](governance/data-encryption-at-rest-in-transit.md)
+- [Access Control](governance/access-control.md)
+- [Data Masking](governance/data-masking.md)
+- [PII Handling](governance/pii-handling.md)
+- [GDPR Compliance](governance/gdpr-compliance.md)
 - [Data Retention Policies](./storage/data-retention-policies.md)
-- Audit Logging
+- [Audit Logging](governance/audit-logging.md)
 
 ## Data Observability
 
 - [Data Observability](./observability/data-observability.md)
-- Data Monitoring
-- Data Logging
-- Data Metrics
-- Data Tracing
-- Data Alerting
-- Data Health Checks
-- Pipeline Performance Monitoring
+- [Data Monitoring](observability/data-monitoring.md)
+- [Data Logging](observability/data-logging.md)
+- [Data Metrics](observability/data-metrics.md)
+- [Data Tracing](observability/data-tracing.md)
+- [Data Alerting](observability/data-alerting.md)
+- [Data Health Checks](observability/data-health-checks.md)
+- [Pipeline Performance Monitoring](observability/pipeline-performance-monitoring.md)
 
 ## Advanced Concepts
 
 ### Performance Optimization
 - [Data Partitioning](./storage/data-partitioning.md) Strategies
 - [Query Optimization](./databases/query-optimization.md)
-- Caching Strategies
-- Materialized Views
-- Incremental Processing
-- Parallel Processing
-- Resource Management
+- [Caching Strategies](advanced/caching-strategies.md)
+- [Materialized Views](advanced/materialized-views.md)
+- [Incremental Processing](advanced/incremental-processing.md)
+- [Parallel Processing](advanced/parallel-processing.md)
+- [Resource Management](advanced/resource-management.md)
 
 ### Scalability & Reliability
-- Horizontal Scaling
-- Vertical Scaling
-- Auto-scaling
-- Fault Tolerance
-- Disaster Recovery
-- High Availability
+- [Horizontal Scaling](advanced/horizontal-scaling.md)
+- [Vertical Scaling](advanced/vertical-scaling.md)
+- [Auto-scaling](advanced/auto-scaling.md)
+- [Fault Tolerance](advanced/fault-tolerance.md)
+- [Disaster Recovery](advanced/disaster-recovery.md)
+- [High Availability](advanced/high-availability.md)
 - [Data Replication](./patterns/data-replication.md) Strategies
 
 ### Modern Techniques
 - [Data Versioning](./advanced/data-versioning.md)
-- Feature Stores
-- Data Contracts
-- Data Testing
+- [[Feature Stores](advanced/feature-stores.md)](ai-ml/feature-stores.md)
+- [Data Contracts](advanced/data-contracts.md)
+- [Data Testing](advanced/data-testing.md)
 - [Data Observability](./observability/data-observability.md) Platforms
-- Reverse ETL
-- Data Activation
+- [Reverse ETL](advanced/reverse-etl.md)
+- [Data Activation](advanced/data-activation.md)
 
 ## AI & Machine Learning
 
 ### ML Pipeline Concepts
-- Machine Learning Pipelines
+- [Machine Learning Pipelines](ai-ml/machine-learning-pipelines.md)
 - MLOps (Machine Learning Operations)
 - [Model Training Pipelines](./ai-ml/model-training-pipelines.md)
-- Model Inference Pipelines
-- Model Serving
-- Model Deployment
-- Model Versioning
-- Model Registry
-- Model Monitoring
-- Model Drift Detection
+- [Model Inference Pipelines](ai-ml/model-inference-pipelines.md)
+- [Model Serving](ai-ml/model-serving.md)
+- [Model Deployment](ai-ml/model-deployment.md)
+- [Model Versioning](ai-ml/model-versioning.md)
+- [Model Registry](ai-ml/model-registry.md)
+- [Model Monitoring](ai-ml/model-monitoring.md)
+- [Model Drift Detection](ai-ml/model-drift-detection.md)
 
 ### Feature Engineering
 - [Feature Engineering](./ai-ml/feature-engineering.md)
-- Feature Selection
-- Feature Transformation
-- Feature Scaling
-- Feature Encoding
-- Feature Stores
-- Online vs Offline Features
-- Feature Pipelines
-- Feature Validation
+- [Feature Selection](ai-ml/feature-selection.md)
+- [Feature Transformation](ai-ml/feature-transformation.md)
+- [Feature Scaling](ai-ml/feature-scaling.md)
+- [Feature Encoding](ai-ml/feature-encoding.md)
+- [[Feature Stores](advanced/feature-stores.md)](ai-ml/feature-stores.md)
+- [Online vs Offline Features](ai-ml/online-vs-offline-features.md)
+- [Feature Pipelines](ai-ml/feature-pipelines.md)
+- [Feature Validation](ai-ml/feature-validation.md)
 
 ### Data for ML
-- Training Data Preparation
-- Data Labeling
-- Data Augmentation
-- Train/Validation/Test Splits
-- Data Sampling for ML
-- Imbalanced Data Handling
-- Data Quality for ML
-- ML Data Lineage
+- [Training Data Preparation](ai-ml/training-data-preparation.md)
+- [Data Labeling](ai-ml/data-labeling.md)
+- [Data Augmentation](ai-ml/data-augmentation.md)
+- [Train/Validation/Test Splits](ai-ml/train-validation-test-splits.md)
+- [Data Sampling for ML](ai-ml/data-sampling-for-ml.md)
+- [Imbalanced Data Handling](ai-ml/imbalanced-data-handling.md)
+- [Data Quality for ML](ai-ml/data-quality-for-ml.md)
+- [ML Data Lineage](ai-ml/ml-data-lineage.md)
 
 ### AI Integration
-- AI-powered Data Processing
-- Automated Data Quality
-- AI-assisted Data Discovery
-- Natural Language Processing in Pipelines
-- Computer Vision Data Pipelines
-- LLM Integration in Data Pipelines
-- Generative AI for Data
+- [AI-powered Data Processing](ai-ml/ai-powered-data-processing.md)
+- [Automated Data Quality](ai-ml/automated-data-quality.md)
+- [AI-assisted Data Discovery](ai-ml/ai-assisted-data-discovery.md)
+- [Natural Language Processing in Pipelines](ai-ml/natural-language-processing-in-pipelines.md)
+- [Computer Vision Data Pipelines](ai-ml/computer-vision-data-pipelines.md)
+- [LLM Integration in Data Pipelines](ai-ml/llm-integration-in-data-pipelines.md)
+- [Generative AI for Data](ai-ml/generative-ai-for-data.md)
 - [Model Context Protocol (MCP)](./ai-ml/mcp.md)
 
 ## Conversational Analytics
@@ -332,77 +332,77 @@ Quick navigation to all topics organized by category.
 ### Conversational Interfaces
 - [Conversational Analytics](./conversational-analytics/conversational-analytics.md)
 - [Natural Language Querying](./conversational-analytics/natural-language-querying.md)
-- Chat-based Data Exploration
-- Voice-enabled Analytics
-- AI-powered Data Q&A
+- [Chat-based Data Exploration](conversational-analytics/chat-based-data-exploration.md)
+- [Voice-enabled Analytics](conversational-analytics/voice-enabled-analytics.md)
+- [AI-powered Data Q&A](conversational-analytics/ai-powered-data-qa.md)
 - [Semantic Search](./databases/semantic-search.md) in Data
 - [[[LLM-based Data Discovery](conversational-analytics/LLM-based-data-discovery.md)](./conversational-analytics/LLM-based-data-discovery.md)](./conversational-analytics/LLM-based-data-discovery.md)
-- Conversational BI
+- [Conversational BI](conversational-analytics/conversational-bi.md)
 
 ### AI-Assisted Exploration
 - AI-powered Data Cataloging
-- Intelligent Data Recommendations
-- Automated Insight Generation
+- [Intelligent Data Recommendations](conversational-analytics/intelligent-data-recommendations.md)
+- [Automated Insight Generation](conversational-analytics/automated-insight-generation.md)
 - [[[Natural Language to SQL](ai-ml/natural-language-to-sql.md)](./ai-ml/natural-language-to-sql.md)](./ai-ml/natural-language-to-sql.md)
-- Query Understanding
-- Context-aware Data Queries
-- Multi-modal Data Interaction
+- [Query Understanding](conversational-analytics/query-understanding.md)
+- [Context-aware Data Queries](conversational-analytics/context-aware-data-queries.md)
+- [Multi-modal Data Interaction](conversational-analytics/multi-modal-data-interaction.md)
 
 ## Analytics & Business Intelligence
 
 ### Analytics Concepts
 - Business Intelligence (BI)
-- Analytics Pipelines
-- Reporting Pipelines
-- Dashboard Creation
-- Ad-hoc Analytics
-- Self-service Analytics
-- Embedded Analytics
-- Real-time Analytics
-- Predictive Analytics
-- Prescriptive Analytics
+- [Analytics Pipelines](analytics/analytics-pipelines.md)
+- [Reporting Pipelines](analytics/reporting-pipelines.md)
+- [Dashboard Creation](analytics/dashboard-creation.md)
+- [Ad-hoc Analytics](analytics/ad-hoc-analytics.md)
+- [Self-service Analytics](analytics/self-service-analytics.md)
+- [Embedded Analytics](analytics/embedded-analytics.md)
+- [Real-time Analytics](analytics/real-time-analytics.md)
+- [Predictive Analytics](analytics/predictive-analytics.md)
+- [Prescriptive Analytics](analytics/prescriptive-analytics.md)
 
 ### Analytical Processing
 - OLAP (Online Analytical Processing)
-- OLTP vs OLAP
-- Multidimensional Analysis
-- Data Cubes
-- Roll-up and Drill-down
-- Slice and Dice
-- Pivot Operations
-- Time-series Analysis
-- Cohort Analysis
+- [OLTP vs OLAP](analytics/oltp-vs-olap.md)
+- [Multidimensional Analysis](analytics/multidimensional-analysis.md)
+- [Data Cubes](analytics/data-cubes.md)
+- [Roll-up and Drill-down](analytics/roll-up-and-drill-down.md)
+- [Slice and Dice](analytics/slice-and-dice.md)
+- [Pivot Operations](analytics/pivot-operations.md)
+- [Time-series Analysis](analytics/time-series-analysis.md)
+- [Cohort Analysis](analytics/cohort-analysis.md)
 
 ### Query & Reporting
-- SQL Analytics
-- Query Engines
+- [SQL Analytics](analytics/sql-analytics.md)
+- [Query Engines](analytics/query-engines.md)
 - [Query Optimization](./databases/query-optimization.md) for Analytics
-- Materialized Views for Analytics
-- Report Generation
-- Scheduled Reporting
-- Report Distribution
-- Interactive Dashboards
-- Data Visualization
-- Metrics and KPIs
+- [Materialized Views](advanced/materialized-views.md) for Analytics
+- [Report Generation](analytics/report-generation.md)
+- [Scheduled Reporting](analytics/scheduled-reporting.md)
+- [Report Distribution](analytics/report-distribution.md)
+- [Interactive Dashboards](analytics/interactive-dashboards.md)
+- [Data Visualization](analytics/data-visualization.md)
+- [Metrics and KPIs](analytics/metrics-and-kpis.md)
 
 ### Analytics Delivery
-- Data Marts
-- Analytical Databases
-- Columnar Analytics
-- In-memory Analytics
-- Streaming Analytics
-- Event Analytics
-- User Analytics
-- Product Analytics
+- [Data Marts](analytics/data-marts.md)
+- [Analytical Databases](analytics/analytical-databases.md)
+- [Columnar Analytics](analytics/columnar-analytics.md)
+- [In-memory Analytics](analytics/in-memory-analytics.md)
+- [Streaming Analytics](analytics/streaming-analytics.md)
+- [Event Analytics](analytics/event-analytics.md)
+- [User Analytics](analytics/user-analytics.md)
+- [Product Analytics](analytics/product-analytics.md)
 
 ## Cross-Cutting Topics
 
 - [Data Pipeline Best Practices](./cross-cutting/data-pipeline-best-practices.md)
-- Data Pipeline Anti-patterns
-- Data Pipeline Testing Strategies
-- Data Pipeline Documentation
-- Data Pipeline Cost Optimization
-- Data Pipeline Migration Strategies
+- [Data Pipeline Anti-patterns](cross-cutting/data-pipeline-anti-patterns.md)
+- [Data Pipeline Testing Strategies](cross-cutting/data-pipeline-testing-strategies.md)
+- [Data Pipeline Documentation](cross-cutting/data-pipeline-documentation.md)
+- [Data Pipeline Cost Optimization](cross-cutting/data-pipeline-cost-optimization.md)
+- [Data Pipeline Migration Strategies](cross-cutting/data-pipeline-migration-strategies.md)
 
 ## Version Control & Git
 
