@@ -28,6 +28,7 @@ theme:
     - navigation.indexes
     - navigation.path
     - navigation.top
+    - navigation.footer   # prev/next links within each category
     - search.suggest
     - search.highlight
   icon:
@@ -41,6 +42,7 @@ nav:
   - Home: index.md
   - Full index: full-index.md
   - Topic list: TOPICS.md
+  - Topics needing content: topics-needing-content.md
   - Architecture & Design: architecture/index.md
   - Data Ingestion: ingestion/index.md
   - Data Storage: storage/index.md

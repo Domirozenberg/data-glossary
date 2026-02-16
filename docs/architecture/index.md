@@ -5,7 +5,7 @@ Concepts and patterns for data pipeline architecture, processing paradigms, and 
 Browse the topics listed below.
 
 ## Topics in this section
-*🛠 = includes Products & Tools*
+*🛠 = includes Products & Tools · 📝 = topic needs content*
 
 - [Batch Processing](batch-processing.md)
 - [Data Fabric Architecture](data-fabric-architecture.md)

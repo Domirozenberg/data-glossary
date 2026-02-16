@@ -5,7 +5,7 @@ Storage concepts and strategies: object storage, partitioning, tiering, retentio
 Browse the topics listed below.
 
 ## Topics in this section
-*🛠 = includes Products & Tools*
+*🛠 = includes Products & Tools · 📝 = topic needs content*
 
 - [Columnar Storage](columnar-storage.md)
 - [Data Archiving](data-archiving.md)

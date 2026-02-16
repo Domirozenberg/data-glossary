@@ -5,7 +5,7 @@ Dimensional modeling, star/snowflake schemas, fact and dimension tables, SCDs, a
 Browse the topics listed below.
 
 ## Topics in this section
-*🛠 = includes Products & Tools*
+*🛠 = includes Products & Tools · 📝 = topic needs content*
 
 - [Anchor Modeling](anchor-modeling.md)
 - [Composite Keys](composite-keys.md)

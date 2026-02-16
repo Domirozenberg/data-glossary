@@ -5,7 +5,7 @@ Cleansing, normalization, enrichment, schema evolution, and other transformation
 Browse the topics listed below.
 
 ## Topics in this section
-*🛠 = includes Products & Tools*
+*🛠 = includes Products & Tools · 📝 = topic needs content*
 
 - [Data Aggregation](data-aggregation.md)
 - [Data Anonymization](data-anonymization.md)

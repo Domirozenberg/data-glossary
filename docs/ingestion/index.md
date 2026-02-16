@@ -5,7 +5,7 @@ How data is collected and brought into the pipeline: batch, streaming, API-based
 Browse the topics listed below.
 
 ## Topics in this section
-*🛠 = includes Products & Tools*
+*🛠 = includes Products & Tools · 📝 = topic needs content*
 
 - [Api Based Ingestion](api-based-ingestion.md)
 - [At Least Once Semantics](at-least-once-semantics.md)

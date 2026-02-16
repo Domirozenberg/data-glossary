@@ -5,7 +5,7 @@ Relational, NoSQL, graph, vector, and specialized databases; scaling, replicatio
 Browse the topics listed below.
 
 ## Topics in this section
-*🛠 = includes Products & Tools*
+*🛠 = includes Products & Tools · 📝 = topic needs content*
 
 - [Acid Properties](acid-properties.md)
 - [Approximate Nearest Neighbor](approximate-nearest-neighbor.md)

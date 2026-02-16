@@ -5,7 +5,7 @@ ETL, ELT, CDC, replication, and other patterns for moving and syncing data.
 Browse the topics listed below.
 
 ## Topics in this section
-*🛠 = includes Products & Tools*
+*🛠 = includes Products & Tools · 📝 = topic needs content*
 
 - [Data Replication](data-replication.md)
 - [Data Synchronization](data-synchronization.md)

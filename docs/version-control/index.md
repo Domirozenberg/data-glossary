@@ -5,7 +5,7 @@ Git and GitHub: repository workflow, commit, push/pull, branches, merge, and pul
 Browse the topics listed below.
 
 ## Topics in this section
-*🛠 = includes Products & Tools*
+*🛠 = includes Products & Tools · 📝 = topic needs content*
 
 - [Git And Github](git-and-github.md)
 - [Git Branches](git-branches.md)
