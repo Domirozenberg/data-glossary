@@ -1,0 +1,2347 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A browsable reference for data engineering and pipeline concepts">
+      
+      
+      
+        <link rel="canonical" href="https://your-project.github.io/full-index/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../TOPICS/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Full index - Data Pipeline Glossary</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-pipeline-glossary-index" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Data Pipeline Glossary" class="md-header__button md-logo" aria-label="Data Pipeline Glossary" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Data Pipeline Glossary
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Full index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Data Pipeline Glossary" class="md-nav__button md-logo" aria-label="Data Pipeline Glossary" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Data Pipeline Glossary
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full index
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-design-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture &amp; Design Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture &amp; Design Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-paradigms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing Paradigms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-ingestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Ingestion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Storage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-types-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Types &amp; Technologies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Types &amp; Technologies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relational-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relational Databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nosql-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NoSQL Databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graph Databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector Databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specialized-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Specialized Databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Transformation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Modeling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-quality-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Quality &amp; Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Orchestration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-formats-serialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Formats &amp; Serialization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Governance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Observability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalability-reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scalability &amp; Reliability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modern-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modern Techniques
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI &amp; Machine Learning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI &amp; Machine Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ml-pipeline-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ML Pipeline Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Engineering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-for-ml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data for ML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conversational-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversational Analytics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conversational Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversational-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversational Interfaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-assisted-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI-Assisted Exploration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytics-business-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics &amp; Business Intelligence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analytics &amp; Business Intelligence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analytics-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytical-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytical Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query &amp; Reporting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics Delivery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-cutting-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Cutting Topics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-control-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version Control &amp; Git
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TOPICS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Topic list
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture & Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ingestion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Ingestion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Databases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transformation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Transformation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Modeling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Quality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../orchestration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Orchestration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Formats
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../observability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Observability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-ml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI & Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conversational-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conversational Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analytics & BI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cross-cutting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cross-cutting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Version Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-design-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture &amp; Design Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture &amp; Design Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-paradigms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing Paradigms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-ingestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Ingestion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Storage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-types-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Types &amp; Technologies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Types &amp; Technologies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relational-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relational Databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nosql-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NoSQL Databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graph Databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector Databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specialized-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Specialized Databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Transformation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Modeling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-quality-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Quality &amp; Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Orchestration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-formats-serialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Formats &amp; Serialization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Governance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Observability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalability-reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scalability &amp; Reliability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modern-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modern Techniques
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI &amp; Machine Learning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI &amp; Machine Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ml-pipeline-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ML Pipeline Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Engineering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-for-ml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data for ML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conversational-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversational Analytics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conversational Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversational-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversational Interfaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-assisted-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI-Assisted Exploration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytics-business-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics &amp; Business Intelligence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analytics &amp; Business Intelligence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analytics-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytical-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytical Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query &amp; Reporting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics Delivery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-cutting-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Cutting Topics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-control-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version Control &amp; Git
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="data-pipeline-glossary-index">Data Pipeline Glossary - Index<a class="headerlink" href="#data-pipeline-glossary-index" title="Permanent link">&para;</a></h1>
+<p>Quick navigation to all topics organized by category.</p>
+<h2 id="architecture-design-patterns">Architecture &amp; Design Patterns<a class="headerlink" href="#architecture-design-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="core-architecture">Core Architecture<a class="headerlink" href="#core-architecture" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../architecture/data-pipeline-architecture/">[[[Data Pipeline Architecture](architecture/data-pipeline-architecture.md)](./architecture/data-pipeline-architecture.md)](./architecture/data-pipeline-architecture.md)</a></li>
+<li><a href="../architecture/lambda-architecture/">Lambda Architecture</a></li>
+<li><a href="../architecture/kappa-architecture/">Kappa Architecture</a></li>
+<li><a href="../architecture/data-mesh-architecture/">Data Mesh Architecture</a></li>
+<li><a href="../architecture/data-fabric-architecture/">Data Fabric Architecture</a></li>
+<li><a href="../architecture/medallion-architecture/">Medallion Architecture (Bronze/Silver/Gold)</a></li>
+<li><a href="../architecture/data-lake-vs-data-warehouse/">Data Lake vs Data Warehouse</a></li>
+<li><a href="../architecture/data-lakehouse/">Data Lakehouse</a></li>
+<li><a href="../architecture/data-hub-architecture/">Data Hub Architecture</a></li>
+</ul>
+<h3 id="processing-paradigms">Processing Paradigms<a class="headerlink" href="#processing-paradigms" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../architecture/batch-processing/">Batch Processing</a></li>
+<li><a href="../architecture/stream-processing/">Stream Processing</a></li>
+<li><a href="../architecture/micro-batch-processing/">Micro-batch Processing</a></li>
+<li><a href="../architecture/event-driven-processing/">Event-driven Processing</a></li>
+<li><a href="../architecture/real-time-vs-near-real-time/">Real-time vs Near-real-time Processing</a></li>
+</ul>
+<h3 id="integration-patterns">Integration Patterns<a class="headerlink" href="#integration-patterns" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../patterns/etl-vs-elt/">[[[ETL vs ELT](patterns/etl-vs-elt.md)](./patterns/etl-vs-elt.md)](./patterns/etl-vs-elt.md)</a></li>
+<li>ETLT (Extract, Transform, Load, Transform)</li>
+<li>Change Data Capture (CDC)</li>
+<li><a href="../patterns/data-replication/">Data Replication</a></li>
+<li><a href="../patterns/data-synchronization/">Data Synchronization</a></li>
+</ul>
+<h2 id="data-ingestion">Data Ingestion<a class="headerlink" href="#data-ingestion" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../ingestion/change-data-capture/">Change Data Capture (CDC)</a></li>
+<li><a href="../ingestion/batch-ingestion/">Batch Ingestion</a></li>
+<li><a href="../ingestion/streaming-ingestion/">Streaming Ingestion</a></li>
+<li><a href="../ingestion/api-based-ingestion/">API-based Ingestion</a></li>
+<li><a href="../ingestion/file-based-ingestion/">File-based Ingestion</a></li>
+<li><a href="../ingestion/database-replication/">[[[Database Replication](./databases/database-replication.md)](./ingestion/database-replication.md)](./ingestion/database-replication.md)</a></li>
+<li><a href="../ingestion/log-based-ingestion/">Log-based Ingestion</a></li>
+<li><a href="../ingestion/webhook-ingestion/">Webhook Ingestion</a></li>
+<li><a href="../ingestion/push-vs-pull-ingestion/">Push vs Pull Ingestion</a></li>
+<li><a href="../ingestion/full-load-vs-incremental-load/">Full Load vs Incremental Load</a></li>
+<li><a href="../ingestion/upsert-patterns/">Upsert Patterns</a></li>
+<li><a href="../ingestion/idempotent-ingestion/">Idempotent Ingestion</a></li>
+<li><a href="../ingestion/exactly-once-semantics/">Exactly-once Semantics</a></li>
+<li><a href="../ingestion/at-least-once-semantics/">At-least-once Semantics</a></li>
+</ul>
+<h2 id="data-storage">Data Storage<a class="headerlink" href="#data-storage" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../storage/object-storage/">Object Storage</a></li>
+<li><a href="../storage/columnar-storage/">Columnar Storage</a></li>
+<li><a href="../storage/row-based-storage/">Row-based Storage</a></li>
+<li><a href="../storage/hybrid-storage/">Hybrid Storage</a></li>
+<li><a href="../storage/data-partitioning/">Data Partitioning</a></li>
+<li><a href="../storage/data-bucketing/">Data Bucketing</a></li>
+<li><a href="../storage/data-clustering/">Data Clustering</a></li>
+<li><a href="../storage/data-indexing/">Data Indexing</a></li>
+<li><a href="../storage/hot-vs-cold-storage/">Hot vs Cold Storage</a></li>
+<li><a href="../storage/data-tiering/">Data Tiering</a></li>
+<li><a href="../storage/data-archiving/">Data Archiving</a></li>
+<li><a href="../storage/data-retention-policies/">Data Retention Policies</a></li>
+<li><a href="../storage/data-lifecycle-management/">Data Lifecycle Management</a></li>
+<li><a href="../storage/storage-compression/">Storage Compression</a></li>
+<li><a href="../storage/storage-encryption/">Storage Encryption</a></li>
+</ul>
+<h2 id="database-types-technologies">Database Types &amp; Technologies<a class="headerlink" href="#database-types-technologies" title="Permanent link">&para;</a></h2>
+<h3 id="relational-databases">Relational Databases<a class="headerlink" href="#relational-databases" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Relational Database (RDBMS)</li>
+<li><a href="../databases/acid-properties/">ACID Properties</a></li>
+<li>SQL (Structured Query Language)</li>
+<li><a href="../databases/normalization/">Normalization</a></li>
+<li><a href="../databases/foreign-keys-relationships/">Foreign Keys and Relationships</a></li>
+<li><a href="../databases/transactions/">Transactions</a></li>
+<li><a href="../databases/database-indexing/">Database Indexing</a></li>
+<li><a href="../databases/query-optimization/">Query Optimization</a></li>
+<li><a href="../databases/database-normalization-forms/">Database Normalization Forms</a></li>
+</ul>
+<h3 id="nosql-databases">NoSQL Databases<a class="headerlink" href="#nosql-databases" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../databases/nosql-database/">NoSQL Database Overview</a></li>
+<li><a href="../databases/document-databases/">Document Databases</a></li>
+<li><a href="../databases/key-value-stores/">Key-Value Stores</a></li>
+<li>Column-Family Stores (Wide-Column)</li>
+<li><a href="../databases/nosql-vs-sql-trade-offs/">NoSQL vs SQL Trade-offs</a></li>
+<li><a href="../databases/eventual-consistency/">Eventual Consistency</a></li>
+<li><a href="../databases/cap-theorem/">CAP Theorem</a></li>
+<li><a href="../databases/base-properties/">BASE Properties</a></li>
+</ul>
+<h3 id="graph-databases">Graph Databases<a class="headerlink" href="#graph-databases" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../databases/graph-database/">Graph Database</a></li>
+<li><a href="../databases/nodes-and-edges/">Nodes and Edges</a></li>
+<li><a href="../databases/graph-traversal/">Graph Traversal</a></li>
+<li><a href="../databases/property-graphs/">Property Graphs</a></li>
+<li>RDF (Resource Description Framework)</li>
+<li><a href="../databases/graph-query-languages/">Graph Query Languages</a></li>
+<li><a href="../databases/graph-algorithms/">Graph Algorithms</a></li>
+<li><a href="../databases/use-cases-graph-databases/">Use Cases for Graph Databases</a></li>
+</ul>
+<h3 id="vector-databases">Vector Databases<a class="headerlink" href="#vector-databases" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../databases/vector-database/">Vector Database</a></li>
+<li><a href="../databases/embeddings/">Embeddings</a></li>
+<li><a href="../databases/similarity-search/">Similarity Search</a></li>
+<li>Approximate Nearest Neighbor (ANN)</li>
+<li><a href="../databases/vector-indexing/">Vector Indexing</a></li>
+<li><a href="../databases/semantic-search/">Semantic Search</a></li>
+<li><a href="../databases/use-cases-vector-databases/">Use Cases for Vector Databases</a></li>
+<li><a href="../databases/vector-database/">Vector Database</a> vs Traditional Database</li>
+</ul>
+<h3 id="specialized-databases">Specialized Databases<a class="headerlink" href="#specialized-databases" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../databases/time-series-databases/">Time-Series Databases</a></li>
+<li><a href="../databases/in-memory-databases/">In-Memory Databases</a></li>
+<li><a href="../databases/newsql-databases/">NewSQL Databases</a></li>
+<li><a href="../databases/multi-model-databases/">Multi-Model Databases</a></li>
+<li><a href="../databases/distributed-databases/">Distributed Databases</a></li>
+<li><a href="../databases/blockchain-databases/">Blockchain Databases</a></li>
+<li><a href="../databases/spatial-databases/">Spatial Databases</a></li>
+<li><a href="../databases/search-databases/">Search Databases</a></li>
+</ul>
+<h3 id="database-concepts">Database Concepts<a class="headerlink" href="#database-concepts" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../databases/database-sharding/">Database Sharding</a></li>
+<li><a href="../ingestion/database-replication/">[[[Database Replication](./databases/database-replication.md)](./ingestion/database-replication.md)](./ingestion/database-replication.md)</a></li>
+<li><a href="../databases/master-slave-replication/">Master-Slave Replication</a></li>
+<li><a href="../databases/master-master-replication/">Master-Master Replication</a></li>
+<li><a href="../databases/database-clustering/">Database Clustering</a></li>
+<li><a href="../databases/database-partitioning/">Database Partitioning</a></li>
+<li><a href="../databases/horizontal-vs-vertical-scaling/">Horizontal vs Vertical Scaling</a></li>
+<li><a href="../databases/database-backup-recovery/">Database Backup and Recovery</a></li>
+<li><a href="../databases/database-migration/">Database Migration</a></li>
+<li><a href="../databases/database-versioning/">Database Versioning</a></li>
+</ul>
+<h3 id="database-selection">Database Selection<a class="headerlink" href="#database-selection" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../databases/choosing-right-database/">Choosing the Right Database</a></li>
+<li><a href="../databases/database-performance-considerations/">Database Performance Considerations</a></li>
+<li><a href="../databases/database-scalability-patterns/">Database Scalability Patterns</a></li>
+<li><a href="../databases/polyglot-persistence/">Polyglot Persistence</a></li>
+<li>Database as a Service (DBaaS)</li>
+</ul>
+<h2 id="data-transformation">Data Transformation<a class="headerlink" href="#data-transformation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../transformation/data-cleansing/">Data Cleansing</a></li>
+<li><a href="../transformation/data-normalization/">Data Normalization</a></li>
+<li><a href="../transformation/data-denormalization/">Data Denormalization</a></li>
+<li><a href="../transformation/data-aggregation/">Data Aggregation</a></li>
+<li><a href="../transformation/data-enrichment/">Data Enrichment</a></li>
+<li><a href="../transformation/data-joining/">Data Joining</a></li>
+<li><a href="../transformation/data-filtering/">Data Filtering</a></li>
+<li><a href="../transformation/data-pivoting-unpivoting/">Data Pivoting/Unpivoting</a></li>
+<li><a href="../transformation/schema-evolution/">Schema Evolution</a></li>
+<li><a href="../transformation/schema-drift-handling/">Schema Drift Handling</a></li>
+<li><a href="../transformation/data-type-conversion/">Data Type Conversion</a></li>
+<li><a href="../transformation/data-format-conversion/">Data Format Conversion</a></li>
+<li><a href="../transformation/data-deduplication/">Data Deduplication</a></li>
+<li><a href="../transformation/data-masking/">Data Masking</a></li>
+<li><a href="../transformation/data-anonymization/">Data Anonymization</a></li>
+<li><a href="../transformation/data-standardization/">Data Standardization</a></li>
+</ul>
+<h2 id="data-modeling">Data Modeling<a class="headerlink" href="#data-modeling" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../modeling/dimensional-modeling/">Dimensional Modeling</a></li>
+<li><a href="../modeling/star-schema/">Star Schema</a></li>
+<li><a href="../modeling/snowflake-schema/">Snowflake Schema</a></li>
+<li><a href="../modeling/fact-tables/">Fact Tables</a></li>
+<li><a href="../modeling/dimension-tables/">Dimension Tables</a></li>
+<li><a href="../modeling/normalized-vs-nonnormalized/">Normalized vs Denormalized Models</a></li>
+<li><a href="../modeling/data-vault-modeling/">Data Vault Modeling</a></li>
+<li><a href="../modeling/graph-modeling/">Graph Modeling</a></li>
+<li><a href="../modeling/anchor-modeling/">Anchor Modeling</a></li>
+<li><a href="../modeling/slowly-changing-dimensions/">Slowly Changing Dimensions (SCD)</a></li>
+<li><a href="../modeling/surrogate-keys/">Surrogate Keys</a></li>
+<li><a href="../modeling/natural-keys/">Natural Keys</a></li>
+<li><a href="../modeling/composite-keys/">Composite Keys</a></li>
+<li><a href="../modeling/data-granularity/">Data Granularity</a></li>
+<li><a href="../modeling/data-aggregation-levels/">Data Aggregation Levels</a></li>
+</ul>
+<h2 id="data-quality-validation">Data Quality &amp; Validation<a class="headerlink" href="#data-quality-validation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../quality/data-completeness/">Data Completeness</a></li>
+<li><a href="../quality/data-accuracy/">Data Accuracy</a></li>
+<li><a href="../quality/data-consistency/">Data Consistency</a></li>
+<li><a href="../quality/data-validity/">Data Validity</a></li>
+<li><a href="../quality/data-timeliness/">Data Timeliness</a></li>
+<li><a href="../quality/data-uniqueness/">Data Uniqueness</a></li>
+<li><a href="../quality/data-integrity/">Data Integrity</a></li>
+<li><a href="../quality/data-profiling/">Data Profiling</a></li>
+<li><a href="../quality/data-validation-rules/">Data Validation Rules</a></li>
+<li><a href="../quality/data-quality-metrics/">Data Quality Metrics</a></li>
+<li><a href="../quality/data-quality-monitoring/">Data Quality Monitoring</a></li>
+<li><a href="../quality/anomaly-detection/">Anomaly Detection</a></li>
+<li><a href="../quality/data-quality-scoring/">Data Quality Scoring</a></li>
+<li><a href="../quality/data-quality-gates/">Data Quality Gates</a></li>
+</ul>
+<h2 id="data-orchestration">Data Orchestration<a class="headerlink" href="#data-orchestration" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../orchestration/pipeline-orchestration/">Pipeline Orchestration</a></li>
+<li><a href="../orchestration/workflow-scheduling/">Workflow Scheduling</a></li>
+<li><a href="../orchestration/dependency-management/">Dependency Management</a></li>
+<li><a href="../orchestration/task-dependencies/">Task Dependencies</a></li>
+<li><a href="../orchestration/pipeline-triggers/">Pipeline Triggers</a></li>
+<li><a href="../orchestration/error-handling/">Error Handling</a></li>
+<li><a href="../orchestration/retry-strategies/">Retry Strategies</a></li>
+<li><a href="../orchestration/circuit-breakers/">Circuit Breakers</a></li>
+<li><a href="../orchestration/sequential-execution/">Sequential Execution</a></li>
+<li><a href="../orchestration/parallel-execution/">Parallel Execution</a></li>
+<li><a href="../orchestration/conditional-execution/">Conditional Execution</a></li>
+<li><a href="../orchestration/loop-patterns/">Loop Patterns</a></li>
+<li><a href="../orchestration/fan-out-fan-in-patterns/">Fan-out/Fan-in Patterns</a></li>
+<li><a href="../orchestration/pipeline-chaining/">Pipeline Chaining</a></li>
+</ul>
+<h2 id="data-formats-serialization">Data Formats &amp; Serialization<a class="headerlink" href="#data-formats-serialization" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../formats/json/">JSON</a></li>
+<li><a href="../formats/avro/">Avro</a></li>
+<li><a href="../formats/parquet/">Parquet</a></li>
+<li><a href="../formats/orc/">ORC</a></li>
+<li><a href="../formats/csv/">CSV</a></li>
+<li><a href="../formats/xml/">XML</a></li>
+<li><a href="../formats/protocol-buffers/">Protocol Buffers</a></li>
+<li><a href="../formats/delta-format/">Delta Format</a></li>
+<li><a href="../transformation/schema-evolution/">Schema Evolution</a></li>
+<li><a href="../formats/backward-compatibility/">Backward Compatibility</a></li>
+<li><a href="../formats/forward-compatibility/">Forward Compatibility</a></li>
+<li><a href="../formats/schema-registry/">Schema Registry</a></li>
+<li><a href="../formats/data-compression/">Data Compression</a></li>
+<li><a href="../formats/data-encoding/">Data Encoding</a></li>
+</ul>
+<h2 id="data-governance">Data Governance<a class="headerlink" href="#data-governance" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../governance/data-catalog/">Data Catalog</a></li>
+<li><a href="../governance/data-lineage/">Data Lineage</a></li>
+<li><a href="../governance/data-dictionary/">Data Dictionary</a></li>
+<li><a href="../governance/metadata-management/">Metadata Management</a></li>
+<li><a href="../governance/data-classification/">Data Classification</a></li>
+<li><a href="../governance/data-ownership/">Data Ownership</a></li>
+<li><a href="../governance/data-stewardship/">Data Stewardship</a></li>
+<li><a href="../governance/data-privacy/">Data Privacy</a></li>
+<li><a href="../governance/data-encryption-at-rest-in-transit/">Data Encryption (at rest, in transit)</a></li>
+<li><a href="../governance/access-control/">Access Control</a></li>
+<li><a href="../governance/data-masking/">Data Masking</a></li>
+<li><a href="../governance/pii-handling/">PII Handling</a></li>
+<li><a href="../governance/gdpr-compliance/">GDPR Compliance</a></li>
+<li><a href="../storage/data-retention-policies/">Data Retention Policies</a></li>
+<li><a href="../governance/audit-logging/">Audit Logging</a></li>
+</ul>
+<h2 id="data-observability">Data Observability<a class="headerlink" href="#data-observability" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../observability/data-observability/">Data Observability</a></li>
+<li><a href="../observability/data-monitoring/">Data Monitoring</a></li>
+<li><a href="../observability/data-logging/">Data Logging</a></li>
+<li><a href="../observability/data-metrics/">Data Metrics</a></li>
+<li><a href="../observability/data-tracing/">Data Tracing</a></li>
+<li><a href="../observability/data-alerting/">Data Alerting</a></li>
+<li><a href="../observability/data-health-checks/">Data Health Checks</a></li>
+<li><a href="../observability/pipeline-performance-monitoring/">Pipeline Performance Monitoring</a></li>
+</ul>
+<h2 id="advanced-concepts">Advanced Concepts<a class="headerlink" href="#advanced-concepts" title="Permanent link">&para;</a></h2>
+<h3 id="performance-optimization">Performance Optimization<a class="headerlink" href="#performance-optimization" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../storage/data-partitioning/">Data Partitioning</a> Strategies</li>
+<li><a href="../databases/query-optimization/">Query Optimization</a></li>
+<li><a href="../advanced/caching-strategies/">Caching Strategies</a></li>
+<li><a href="../advanced/materialized-views/">Materialized Views</a></li>
+<li><a href="../advanced/incremental-processing/">Incremental Processing</a></li>
+<li><a href="../advanced/parallel-processing/">Parallel Processing</a></li>
+<li><a href="../advanced/resource-management/">Resource Management</a></li>
+</ul>
+<h3 id="scalability-reliability">Scalability &amp; Reliability<a class="headerlink" href="#scalability-reliability" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../advanced/horizontal-scaling/">Horizontal Scaling</a></li>
+<li><a href="../advanced/vertical-scaling/">Vertical Scaling</a></li>
+<li><a href="../advanced/auto-scaling/">Auto-scaling</a></li>
+<li><a href="../advanced/fault-tolerance/">Fault Tolerance</a></li>
+<li><a href="../advanced/disaster-recovery/">Disaster Recovery</a></li>
+<li><a href="../advanced/high-availability/">High Availability</a></li>
+<li><a href="../patterns/data-replication/">Data Replication</a> Strategies</li>
+</ul>
+<h3 id="modern-techniques">Modern Techniques<a class="headerlink" href="#modern-techniques" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../advanced/data-versioning/">Data Versioning</a></li>
+<li><a href="../ai-ml/feature-stores/">[Feature Stores](advanced/feature-stores.md)</a></li>
+<li><a href="../advanced/data-contracts/">Data Contracts</a></li>
+<li><a href="../advanced/data-testing/">Data Testing</a></li>
+<li><a href="../observability/data-observability/">Data Observability</a> Platforms</li>
+<li><a href="../advanced/reverse-etl/">Reverse ETL</a></li>
+<li><a href="../advanced/data-activation/">Data Activation</a></li>
+</ul>
+<h2 id="ai-machine-learning">AI &amp; Machine Learning<a class="headerlink" href="#ai-machine-learning" title="Permanent link">&para;</a></h2>
+<h3 id="ml-pipeline-concepts">ML Pipeline Concepts<a class="headerlink" href="#ml-pipeline-concepts" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../ai-ml/machine-learning-pipelines/">Machine Learning Pipelines</a></li>
+<li>MLOps (Machine Learning Operations)</li>
+<li><a href="../ai-ml/model-training-pipelines/">Model Training Pipelines</a></li>
+<li><a href="../ai-ml/model-inference-pipelines/">Model Inference Pipelines</a></li>
+<li><a href="../ai-ml/model-serving/">Model Serving</a></li>
+<li><a href="../ai-ml/model-deployment/">Model Deployment</a></li>
+<li><a href="../ai-ml/model-versioning/">Model Versioning</a></li>
+<li><a href="../ai-ml/model-registry/">Model Registry</a></li>
+<li><a href="../ai-ml/model-monitoring/">Model Monitoring</a></li>
+<li><a href="../ai-ml/model-drift-detection/">Model Drift Detection</a></li>
+</ul>
+<h3 id="feature-engineering">Feature Engineering<a class="headerlink" href="#feature-engineering" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../ai-ml/feature-engineering/">Feature Engineering</a></li>
+<li><a href="../ai-ml/feature-selection/">Feature Selection</a></li>
+<li><a href="../ai-ml/feature-transformation/">Feature Transformation</a></li>
+<li><a href="../ai-ml/feature-scaling/">Feature Scaling</a></li>
+<li><a href="../ai-ml/feature-encoding/">Feature Encoding</a></li>
+<li><a href="../ai-ml/feature-stores/">[Feature Stores](advanced/feature-stores.md)</a></li>
+<li><a href="../ai-ml/online-vs-offline-features/">Online vs Offline Features</a></li>
+<li><a href="../ai-ml/feature-pipelines/">Feature Pipelines</a></li>
+<li><a href="../ai-ml/feature-validation/">Feature Validation</a></li>
+</ul>
+<h3 id="data-for-ml">Data for ML<a class="headerlink" href="#data-for-ml" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../ai-ml/training-data-preparation/">Training Data Preparation</a></li>
+<li><a href="../ai-ml/data-labeling/">Data Labeling</a></li>
+<li><a href="../ai-ml/data-augmentation/">Data Augmentation</a></li>
+<li><a href="../ai-ml/train-validation-test-splits/">Train/Validation/Test Splits</a></li>
+<li><a href="../ai-ml/data-sampling-for-ml/">Data Sampling for ML</a></li>
+<li><a href="../ai-ml/imbalanced-data-handling/">Imbalanced Data Handling</a></li>
+<li><a href="../ai-ml/data-quality-for-ml/">Data Quality for ML</a></li>
+<li><a href="../ai-ml/ml-data-lineage/">ML Data Lineage</a></li>
+</ul>
+<h3 id="ai-integration">AI Integration<a class="headerlink" href="#ai-integration" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../ai-ml/ai-powered-data-processing/">AI-powered Data Processing</a></li>
+<li><a href="../ai-ml/automated-data-quality/">Automated Data Quality</a></li>
+<li><a href="../ai-ml/ai-assisted-data-discovery/">AI-assisted Data Discovery</a></li>
+<li><a href="../ai-ml/natural-language-processing-in-pipelines/">Natural Language Processing in Pipelines</a></li>
+<li><a href="../ai-ml/computer-vision-data-pipelines/">Computer Vision Data Pipelines</a></li>
+<li><a href="../ai-ml/llm-integration-in-data-pipelines/">LLM Integration in Data Pipelines</a></li>
+<li><a href="../ai-ml/generative-ai-for-data/">Generative AI for Data</a></li>
+<li><a href="../ai-ml/mcp/">Model Context Protocol (MCP)</a></li>
+</ul>
+<h2 id="conversational-analytics">Conversational Analytics<a class="headerlink" href="#conversational-analytics" title="Permanent link">&para;</a></h2>
+<h3 id="conversational-interfaces">Conversational Interfaces<a class="headerlink" href="#conversational-interfaces" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../conversational-analytics/conversational-analytics/">Conversational Analytics</a></li>
+<li><a href="../conversational-analytics/natural-language-querying/">Natural Language Querying</a></li>
+<li><a href="../conversational-analytics/chat-based-data-exploration/">Chat-based Data Exploration</a></li>
+<li><a href="../conversational-analytics/voice-enabled-analytics/">Voice-enabled Analytics</a></li>
+<li><a href="../conversational-analytics/ai-powered-data-qa/">AI-powered Data Q&amp;A</a></li>
+<li><a href="../databases/semantic-search/">Semantic Search</a> in Data</li>
+<li><a href="../conversational-analytics/LLM-based-data-discovery/">[[LLM-based Data Discovery](conversational-analytics/LLM-based-data-discovery.md)](./conversational-analytics/LLM-based-data-discovery.md)</a></li>
+<li><a href="../conversational-analytics/conversational-bi/">Conversational BI</a></li>
+</ul>
+<h3 id="ai-assisted-exploration">AI-Assisted Exploration<a class="headerlink" href="#ai-assisted-exploration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>AI-powered Data Cataloging</li>
+<li><a href="../conversational-analytics/intelligent-data-recommendations/">Intelligent Data Recommendations</a></li>
+<li><a href="../conversational-analytics/automated-insight-generation/">Automated Insight Generation</a></li>
+<li><a href="../ai-ml/natural-language-to-sql/">[[Natural Language to SQL](ai-ml/natural-language-to-sql.md)](./ai-ml/natural-language-to-sql.md)</a></li>
+<li><a href="../conversational-analytics/query-understanding/">Query Understanding</a></li>
+<li><a href="../conversational-analytics/context-aware-data-queries/">Context-aware Data Queries</a></li>
+<li><a href="../conversational-analytics/multi-modal-data-interaction/">Multi-modal Data Interaction</a></li>
+</ul>
+<h2 id="analytics-business-intelligence">Analytics &amp; Business Intelligence<a class="headerlink" href="#analytics-business-intelligence" title="Permanent link">&para;</a></h2>
+<h3 id="analytics-concepts">Analytics Concepts<a class="headerlink" href="#analytics-concepts" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Business Intelligence (BI)</li>
+<li><a href="../analytics/analytics-pipelines/">Analytics Pipelines</a></li>
+<li><a href="../analytics/reporting-pipelines/">Reporting Pipelines</a></li>
+<li><a href="../analytics/dashboard-creation/">Dashboard Creation</a></li>
+<li><a href="../analytics/ad-hoc-analytics/">Ad-hoc Analytics</a></li>
+<li><a href="../analytics/self-service-analytics/">Self-service Analytics</a></li>
+<li><a href="../analytics/embedded-analytics/">Embedded Analytics</a></li>
+<li><a href="../analytics/real-time-analytics/">Real-time Analytics</a></li>
+<li><a href="../analytics/predictive-analytics/">Predictive Analytics</a></li>
+<li><a href="../analytics/prescriptive-analytics/">Prescriptive Analytics</a></li>
+</ul>
+<h3 id="analytical-processing">Analytical Processing<a class="headerlink" href="#analytical-processing" title="Permanent link">&para;</a></h3>
+<ul>
+<li>OLAP (Online Analytical Processing)</li>
+<li><a href="../analytics/oltp-vs-olap/">OLTP vs OLAP</a></li>
+<li><a href="../analytics/multidimensional-analysis/">Multidimensional Analysis</a></li>
+<li><a href="../analytics/data-cubes/">Data Cubes</a></li>
+<li><a href="../analytics/roll-up-and-drill-down/">Roll-up and Drill-down</a></li>
+<li><a href="../analytics/slice-and-dice/">Slice and Dice</a></li>
+<li><a href="../analytics/pivot-operations/">Pivot Operations</a></li>
+<li><a href="../analytics/time-series-analysis/">Time-series Analysis</a></li>
+<li><a href="../analytics/cohort-analysis/">Cohort Analysis</a></li>
+</ul>
+<h3 id="query-reporting">Query &amp; Reporting<a class="headerlink" href="#query-reporting" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../analytics/sql-analytics/">SQL Analytics</a></li>
+<li><a href="../analytics/query-engines/">Query Engines</a></li>
+<li><a href="../databases/query-optimization/">Query Optimization</a> for Analytics</li>
+<li><a href="../advanced/materialized-views/">Materialized Views</a> for Analytics</li>
+<li><a href="../analytics/report-generation/">Report Generation</a></li>
+<li><a href="../analytics/scheduled-reporting/">Scheduled Reporting</a></li>
+<li><a href="../analytics/report-distribution/">Report Distribution</a></li>
+<li><a href="../analytics/interactive-dashboards/">Interactive Dashboards</a></li>
+<li><a href="../analytics/data-visualization/">Data Visualization</a></li>
+<li><a href="../analytics/metrics-and-kpis/">Metrics and KPIs</a></li>
+</ul>
+<h3 id="analytics-delivery">Analytics Delivery<a class="headerlink" href="#analytics-delivery" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../analytics/data-marts/">Data Marts</a></li>
+<li><a href="../analytics/analytical-databases/">Analytical Databases</a></li>
+<li><a href="../analytics/columnar-analytics/">Columnar Analytics</a></li>
+<li><a href="../analytics/in-memory-analytics/">In-memory Analytics</a></li>
+<li><a href="../analytics/streaming-analytics/">Streaming Analytics</a></li>
+<li><a href="../analytics/event-analytics/">Event Analytics</a></li>
+<li><a href="../analytics/user-analytics/">User Analytics</a></li>
+<li><a href="../analytics/product-analytics/">Product Analytics</a></li>
+</ul>
+<h2 id="cross-cutting-topics">Cross-Cutting Topics<a class="headerlink" href="#cross-cutting-topics" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../cross-cutting/data-pipeline-best-practices/">Data Pipeline Best Practices</a></li>
+<li><a href="../cross-cutting/data-pipeline-anti-patterns/">Data Pipeline Anti-patterns</a></li>
+<li><a href="../cross-cutting/data-pipeline-testing-strategies/">Data Pipeline Testing Strategies</a></li>
+<li><a href="../cross-cutting/data-pipeline-documentation/">Data Pipeline Documentation</a></li>
+<li><a href="../cross-cutting/data-pipeline-cost-optimization/">Data Pipeline Cost Optimization</a></li>
+<li><a href="../cross-cutting/data-pipeline-migration-strategies/">Data Pipeline Migration Strategies</a></li>
+</ul>
+<h2 id="version-control-git">Version Control &amp; Git<a class="headerlink" href="#version-control-git" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../version-control/git-and-github/">Git and GitHub</a></li>
+<li><a href="../version-control/git-repository-and-workflow/">Git Repository and Workflow</a></li>
+<li><a href="../version-control/git-clone-and-remotes/">Git Clone and Remotes</a></li>
+<li><a href="../version-control/git-commit-and-status/">Git Commit and Status</a></li>
+<li><a href="../version-control/git-push-and-pull/">Git Push and Pull</a></li>
+<li><a href="../version-control/git-branches/">Git Branches</a></li>
+<li><a href="../version-control/git-merge/">Git Merge</a></li>
+<li><a href="../version-control/github-pull-requests/">GitHub Pull Requests</a></li>
+</ul>
+<hr />
+<p><em>Note: Topics in bold are completed. Others are placeholders for future content.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "navigation.indexes", "navigation.path", "navigation.top", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

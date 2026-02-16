@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cursor4dataglossary"
+version = "0.1.0"
+description = "Data Pipeline Glossary with MkDocs"
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+docs = [
+    "mkdocs>=1.5.0",
+    "mkdocs-material>=9.0.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["mkdocs_section_index_plugin*"]
+
+[project.entry-points."mkdocs.plugins"]
+section_index_updater = "mkdocs_section_index_plugin:SectionIndexUpdaterPlugin"

@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+section_index_updater = mkdocs_section_index_plugin:SectionIndexUpdaterPlugin

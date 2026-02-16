@@ -1,0 +1,6 @@
+# MkDocs + Material theme for browsing the Data Pipeline Glossary
+# Install: pip install -r requirements-docs.txt
+# Run:    python3 -m mkdocs serve
+
+mkdocs>=1.5.0
+mkdocs-material>=9.0.0

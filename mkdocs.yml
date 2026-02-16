@@ -1,0 +1,68 @@
+# Data Pipeline Glossary - MkDocs config
+# Run: mkdocs serve   (then open http://127.0.0.1:8000)
+
+site_name: Data Pipeline Glossary
+site_description: A browsable reference for data engineering and pipeline concepts
+site_url: https://your-project.github.io  # optional: set for deploy
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.expand
+    - navigation.indexes
+    - navigation.path
+    - navigation.top
+    - search.suggest
+    - search.highlight
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - section_index_updater  # runs scripts/update-section-indexes.py before each build (🛠 marks)
+
+nav:
+  - Home: index.md
+  - Full index: full-index.md
+  - Topic list: TOPICS.md
+  - Architecture & Design: architecture/index.md
+  - Data Ingestion: ingestion/index.md
+  - Data Storage: storage/index.md
+  - Databases: databases/index.md
+  - Integration Patterns: patterns/index.md
+  - Data Transformation: transformation/index.md
+  - Data Modeling: modeling/index.md
+  - Data Quality: quality/index.md
+  - Data Orchestration: orchestration/index.md
+  - Data Formats: formats/index.md
+  - Data Governance: governance/index.md
+  - Data Observability: observability/index.md
+  - Advanced Concepts: advanced/index.md
+  - AI & Machine Learning: ai-ml/index.md
+  - Conversational Analytics: conversational-analytics/index.md
+  - Analytics & BI: analytics/index.md
+  - Cross-cutting: cross-cutting/index.md
+  - Version Control: version-control/index.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc:
+      permalink: true

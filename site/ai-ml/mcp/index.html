@@ -1,0 +1,1211 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A browsable reference for data engineering and pipeline concepts">
+      
+      
+      
+        <link rel="canonical" href="https://your-project.github.io/ai-ml/mcp/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Model Context Protocol (MCP) - Data Pipeline Glossary</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#model-context-protocol-mcp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Data Pipeline Glossary" class="md-header__button md-logo" aria-label="Data Pipeline Glossary" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Data Pipeline Glossary
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Model Context Protocol (MCP)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Data Pipeline Glossary" class="md-nav__button md-logo" aria-label="Data Pipeline Glossary" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Data Pipeline Glossary
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../full-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TOPICS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Topic list
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture & Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ingestion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Ingestion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Databases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transformation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Transformation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Modeling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Quality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orchestration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Orchestration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Formats
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../observability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Observability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI & Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conversational-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conversational Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analytics & BI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cross-cutting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cross-cutting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../version-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Version Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Concepts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools &amp; Products
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tools &amp; Products">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mcp-clients-ai-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Clients (AI Applications)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-server-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Server Implementations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-tools-sdks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Development Tools &amp; SDKs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popular-mcp-server-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Popular MCP Server Categories
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-source-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open Source Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Topics
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="model-context-protocol-mcp">Model Context Protocol (MCP)<a class="headerlink" href="#model-context-protocol-mcp" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Model Context Protocol (MCP) is an open protocol that enables AI assistants to securely connect to external data sources, tools, and services. It standardizes how AI systems access and interact with external resources, making it easier to integrate AI capabilities into data pipelines, analytics workflows, and data management systems. MCP enables AI assistants to query databases, access APIs, read files, and execute tools while maintaining security boundaries and standardized interfaces.</p>
+<h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h2>
+<p>Model Context Protocol (MCP) is a standardized communication protocol that defines how AI assistants connect to external resources such as databases, APIs, file systems, and tools. It provides a secure, extensible framework for AI systems to retrieve context, execute operations, and interact with external data sources through a consistent interface, enabling AI-powered data access, querying, and manipulation without requiring direct integration into the AI model itself.</p>
+<h2 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>MCP Servers</strong>: Standalone services that expose resources and tools to AI assistants through the MCP protocol</li>
+<li><strong>Resources</strong>: Read-only data sources that AI assistants can access (databases, files, APIs)</li>
+<li><strong>Tools</strong>: Executable operations that AI assistants can invoke (queries, transformations, data operations)</li>
+<li><strong>Standardized Interface</strong>: Consistent JSON-RPC-based communication protocol for all MCP interactions</li>
+<li><strong>Security Boundaries</strong>: Controlled access to external resources with permission management</li>
+<li><strong>Context Retrieval</strong>: Ability for AI to fetch relevant context from external sources before responding</li>
+<li><strong>Tool Execution</strong>: Capability for AI to invoke external tools and receive results</li>
+<li><strong>Resource Discovery</strong>: Mechanism for AI to discover available resources and tools from MCP servers</li>
+<li><strong>Session Management</strong>: Handling of connections, authentication, and state between AI and MCP servers</li>
+</ul>
+<h2 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<p>Model Context Protocol operates through a client-server architecture:</p>
+<ol>
+<li><strong>MCP Server Setup</strong>: External services implement the MCP protocol, exposing resources and tools</li>
+<li><strong>AI Client Connection</strong>: AI assistants connect to MCP servers using standardized JSON-RPC messages</li>
+<li><strong>Resource Discovery</strong>: AI queries available resources (databases, files, APIs) from MCP servers</li>
+<li><strong>Tool Discovery</strong>: AI queries available tools (queries, operations) that can be executed</li>
+<li><strong>Context Retrieval</strong>: AI requests specific resources when needed for context</li>
+<li><strong>Tool Invocation</strong>: AI calls tools with parameters to perform operations</li>
+<li><strong>Result Processing</strong>: MCP servers return results that AI incorporates into responses</li>
+<li><strong>Session Management</strong>: Connections are maintained with authentication and state management</li>
+</ol>
+<p>Key components:
+- <strong>JSON-RPC Protocol</strong>: Standardized request/response format for all MCP communications
+- <strong>Resource Handlers</strong>: Server-side components that provide access to data sources
+- <strong>Tool Handlers</strong>: Server-side components that execute operations and return results
+- <strong>Authentication</strong>: Secure credential management for accessing protected resources
+- <strong>Error Handling</strong>: Standardized error responses for failed operations
+- <strong>Streaming Support</strong>: Optional streaming of large results or real-time data</p>
+<p>MCP servers can connect to:
+- Databases (SQL, NoSQL, vector databases)
+- File systems and cloud storage
+- REST APIs and web services
+- Data processing tools and pipelines
+- Analytics platforms and BI tools
+- Version control systems
+- Cloud services and infrastructure</p>
+<h2 id="tools-products">Tools &amp; Products<a class="headerlink" href="#tools-products" title="Permanent link">&para;</a></h2>
+<h3 id="mcp-clients-ai-applications">MCP Clients (AI Applications)<a class="headerlink" href="#mcp-clients-ai-applications" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Claude Desktop</strong>: Anthropic's desktop application that supports MCP for connecting Claude to external resources</li>
+<li><strong>Cursor IDE</strong>: Code editor with built-in MCP support for AI-assisted development and data access</li>
+<li><strong>ChatGPT with MCP</strong>: OpenAI's ChatGPT implementations that can connect to MCP servers</li>
+<li><strong>Custom AI Applications</strong>: Any AI application that implements the MCP client protocol</li>
+</ul>
+<h3 id="mcp-server-implementations">MCP Server Implementations<a class="headerlink" href="#mcp-server-implementations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Database MCP Servers</strong>: Servers that connect to SQL databases (PostgreSQL, MySQL, SQLite), NoSQL databases (MongoDB, Redis), and vector databases</li>
+<li><strong>File System MCP Servers</strong>: Servers providing access to local file systems, cloud storage (S3, GCS, Azure Blob), and version control systems</li>
+<li><strong>API MCP Servers</strong>: Servers that wrap REST APIs, GraphQL endpoints, and web services</li>
+<li><strong>Data Platform MCP Servers</strong>: Servers connecting to analytics platforms, BI tools, data warehouses, and data lakes</li>
+<li><strong>Cloud Service MCP Servers</strong>: Servers for AWS, Azure, GCP services and infrastructure management</li>
+</ul>
+<h3 id="development-tools-sdks">Development Tools &amp; SDKs<a class="headerlink" href="#development-tools-sdks" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>TypeScript/JavaScript SDK</strong>: Official MCP SDK for Node.js and browser environments</li>
+<li><strong>Python SDK</strong>: Python implementation for building MCP servers and clients</li>
+<li><strong>Other Language SDKs</strong>: Official and community implementations in Java, Kotlin, C#, Go, PHP, Ruby, Rust, and Swift</li>
+<li><strong>MCP Inspector</strong>: Development tools for debugging and testing MCP server implementations</li>
+<li><strong>MCP Server Templates</strong>: Starter templates and boilerplate code for common MCP server patterns</li>
+</ul>
+<h3 id="popular-mcp-server-categories">Popular MCP Server Categories<a class="headerlink" href="#popular-mcp-server-categories" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Database Connectors</strong>: MCP servers for querying and managing various database systems</li>
+<li><strong>Data Pipeline Tools</strong>: Servers connecting to orchestration platforms (Airflow, Prefect, Dagster)</li>
+<li><strong>Analytics Platforms</strong>: Servers for BI tools, data visualization platforms, and analytics services</li>
+<li><strong>Data Catalog Servers</strong>: Servers providing access to data catalogs, metadata repositories, and data dictionaries</li>
+<li><strong>Monitoring &amp; Observability</strong>: Servers connecting to monitoring tools, logging systems, and observability platforms</li>
+</ul>
+<h3 id="open-source-resources">Open Source Resources<a class="headerlink" href="#open-source-resources" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>MCP Specification</strong>: Open protocol specification maintained by Anthropic</li>
+<li><strong>MCP GitHub Organization</strong>: Official repositories for SDKs, examples, and reference implementations</li>
+<li><strong>Community MCP Servers</strong>: Open-source MCP servers developed by the community for various data sources and tools</li>
+</ul>
+<h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>AI-Powered Data Querying</strong>: Enabling AI assistants to query databases and data warehouses using natural language</li>
+<li><strong>Conversational Analytics</strong>: Allowing users to explore data through chat interfaces with AI accessing live data</li>
+<li><strong>Data Pipeline Integration</strong>: Connecting AI assistants to data pipeline tools for monitoring, debugging, and management</li>
+<li><strong>Automated Data Discovery</strong>: AI assistants discovering and accessing data sources across an organization</li>
+<li><strong>Intelligent Data Cataloging</strong>: AI-powered tools accessing metadata and data catalogs to answer questions</li>
+<li><strong>Real-time Data Access</strong>: AI assistants querying streaming data sources and real-time analytics platforms</li>
+<li><strong>Cross-System Integration</strong>: Enabling AI to work across multiple data systems without custom integrations</li>
+<li><strong>Self-Service Data Access</strong>: Non-technical users accessing data through AI assistants that connect to various sources</li>
+<li><strong>Data Quality Monitoring</strong>: AI assistants accessing data quality metrics and alerting systems</li>
+<li><strong>Schema Exploration</strong>: AI helping users understand database schemas by querying metadata through MCP</li>
+</ul>
+<h2 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Security</strong>: MCP servers must implement proper authentication and authorization for sensitive data access</li>
+<li><strong>Performance</strong>: Network latency and resource access speed can impact AI response times</li>
+<li><strong>Error Handling</strong>: Robust error handling needed when external resources are unavailable</li>
+<li><strong>Resource Limits</strong>: Managing rate limits, query timeouts, and result size constraints</li>
+<li><strong>Data Privacy</strong>: Ensuring MCP servers respect data privacy regulations and access controls</li>
+<li><strong>Server Availability</strong>: Dependency on MCP server availability and reliability</li>
+<li><strong>Protocol Versioning</strong>: Managing compatibility as MCP protocol evolves</li>
+<li><strong>Tool Complexity</strong>: Some operations may be too complex for simple tool invocations</li>
+<li><strong>Context Size</strong>: Large resource responses may exceed AI context windows</li>
+<li><strong>Cost</strong>: Additional infrastructure and compute resources needed for MCP servers</li>
+<li><strong>Standardization</strong>: Ensuring consistent implementations across different MCP servers</li>
+</ul>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Implement Proper Authentication</strong>: Use secure authentication mechanisms for all MCP server connections</li>
+<li><strong>Set Resource Limits</strong>: Implement rate limiting, timeout handling, and result size limits</li>
+<li><strong>Provide Clear Error Messages</strong>: Return descriptive errors that help AI assistants understand failures</li>
+<li><strong>Optimize Resource Access</strong>: Cache frequently accessed resources and optimize query performance</li>
+<li><strong>Document Resources and Tools</strong>: Provide clear descriptions of available resources and tools for AI discovery</li>
+<li><strong>Handle Edge Cases</strong>: Implement robust handling for missing data, network failures, and invalid inputs</li>
+<li><strong>Monitor Usage</strong>: Track MCP server usage, performance metrics, and error rates</li>
+<li><strong>Version Your MCP Servers</strong>: Maintain versioning for MCP server implementations and protocol compatibility</li>
+<li><strong>Implement Caching</strong>: Cache resource responses when appropriate to reduce load and improve performance</li>
+<li><strong>Secure Sensitive Data</strong>: Never expose sensitive credentials or data through MCP without proper security</li>
+<li><strong>Test Thoroughly</strong>: Test MCP servers with various AI clients and edge cases</li>
+<li><strong>Provide Schema Information</strong>: Include schema and metadata information to help AI understand resources</li>
+<li><strong>Support Incremental Access</strong>: For large resources, support pagination or streaming when possible</li>
+</ul>
+<h2 id="related-topics">Related Topics<a class="headerlink" href="#related-topics" title="Permanent link">&para;</a></h2>
+<ul>
+<li>LLM Integration in Data Pipelines</li>
+<li>Conversational Analytics</li>
+<li>Natural Language Querying</li>
+<li>AI-assisted Data Discovery</li>
+<li>Natural Language to SQL</li>
+<li>Data Catalog</li>
+<li>API-based Ingestion</li>
+<li>Self-service Analytics</li>
+<li>Query Optimization</li>
+<li>Data Governance</li>
+</ul>
+<hr />
+<p><strong>Category</strong>: AI &amp; Machine Learning<br />
+<strong>Last Updated</strong>: 2026</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.path", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

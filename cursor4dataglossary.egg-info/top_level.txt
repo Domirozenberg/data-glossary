@@ -1,0 +1,1 @@
+mkdocs_section_index_plugin

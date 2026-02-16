@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+cursor4dataglossary.egg-info/PKG-INFO
+cursor4dataglossary.egg-info/SOURCES.txt
+cursor4dataglossary.egg-info/dependency_links.txt
+cursor4dataglossary.egg-info/entry_points.txt
+cursor4dataglossary.egg-info/requires.txt
+cursor4dataglossary.egg-info/top_level.txt
+mkdocs_section_index_plugin/__init__.py
