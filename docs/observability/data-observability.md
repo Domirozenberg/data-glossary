@@ -57,6 +57,10 @@ Observability pillars:
 - **Monitor Continuously**: Continuous monitoring
 - **Review Regularly**: Regular review of metrics
 
+## Products & Tools
+
+- **[Nimbalyst](../tools-products/nimbalyst.md)**: Data platform for lineage, quality monitoring, and observability
+
 ## Related Topics
 
 - [Data Monitoring](data-monitoring.md)

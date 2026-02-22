@@ -60,6 +60,10 @@ Webhook ingestion:
 - **Error Handling**: Robust error handling and logging
 - **Document Endpoints**: Document webhook endpoints and formats
 
+## Products & Tools
+
+- **[Twilio](../tools-products/twilio.md)**: Communications platform that provides webhooks for real-time event ingestion (SMS, voice, messaging events)
+
 ## Related Topics
 
 - [API-based Ingestion](api-based-ingestion.md)

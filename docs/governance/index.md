@@ -13,7 +13,7 @@ Browse the topics listed below.
 - [Data Classification](data-classification.md) 📝
 - [Data Dictionary](data-dictionary.md) 📝
 - [Data Encryption At Rest In Transit](data-encryption-at-rest-in-transit.md) 📝
-- [Data Lineage](data-lineage.md) 📝
+- [Data Lineage](data-lineage.md) 🛠 📝
 - [Data Masking](data-masking.md) 📝
 - [Data Ownership](data-ownership.md) 📝
 - [Data Privacy](data-privacy.md) 📝

@@ -69,6 +69,10 @@ ELT process follows these steps:
 - **Optimize Queries**: Optimize transformation queries
 - **Document Transformations**: Document transformation logic
 
+## Products & Tools
+
+- **[DBT (Data Build Tool)](../tools-products/dbt.md)**: Popular open-source transformation framework for ELT, using SQL and Jinja in the warehouse
+
 ## Related Topics
 
 - [ETL](etl-vs-elt.md)(Extract, Transform, Load)

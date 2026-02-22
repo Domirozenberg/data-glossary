@@ -12,6 +12,6 @@ Browse the topics listed below.
 - [Data Logging](data-logging.md) 📝
 - [Data Metrics](data-metrics.md) 📝
 - [Data Monitoring](data-monitoring.md) 📝
-- [Data Observability](data-observability.md)
+- [Data Observability](data-observability.md) 🛠
 - [Data Tracing](data-tracing.md) 📝
 - [Pipeline Performance Monitoring](pipeline-performance-monitoring.md) 📝

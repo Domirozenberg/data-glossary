@@ -10,7 +10,7 @@ SECTION_DIRS = [
     "architecture", "ingestion", "storage", "databases", "patterns",
     "transformation", "modeling", "quality", "orchestration", "formats",
     "governance", "observability", "advanced", "ai-ml", "conversational-analytics",
-    "analytics", "cross-cutting", "version-control",
+    "analytics", "cross-cutting", "tools-products", "version-control",
 ]
 
 # Section dir -> nav title (for "Topics needing content" page)
@@ -32,6 +32,7 @@ SECTION_TITLES = {
     "conversational-analytics": "Conversational Analytics",
     "analytics": "Analytics & BI",
     "cross-cutting": "Cross-cutting",
+    "tools-products": "Tools & Products",
     "version-control": "Version Control",
 }
 

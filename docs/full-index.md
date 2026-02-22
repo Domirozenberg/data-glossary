@@ -405,6 +405,13 @@ Quick navigation to all topics organized by category.
 - [Data Pipeline Migration Strategies](cross-cutting/data-pipeline-migration-strategies.md)
 - [MkDocs](./cross-cutting/mkdocs.md)
 
+## Tools & Products
+
+- [DBT (Data Build Tool)](./tools-products/dbt.md)
+- [Apache Airflow](./tools-products/airflow.md)
+- [Nimbalyst](./tools-products/nimbalyst.md)
+- [Twilio](./tools-products/twilio.md)
+
 ## Version Control & Git
 
 - [Git and GitHub](./version-control/git-and-github.md)

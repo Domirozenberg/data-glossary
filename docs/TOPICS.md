@@ -427,6 +427,13 @@
 - [x] Data Pipeline Cost Optimization
 - [x] Data Pipeline Migration Strategies
 
+## Tools & Products
+
+- [x] DBT (Data Build Tool)
+- [x] Apache Airflow
+- [x] Nimbalyst
+- [x] Twilio
+
 ## Version Control & Git
 
 - [x] Git and GitHub

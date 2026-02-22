@@ -30,6 +30,11 @@
 - [Common patterns]
 - [Things to avoid]
 
+## Products & Tools
+
+- **[Nimbalyst](../tools-products/nimbalyst.md)**: Data platform for lineage tracking and impact analysis
+- **[DBT](../tools-products/dbt.md)**: Generates documentation and lineage for transformation models
+
 ## Related Topics
 - [Link to related concepts in the glossary]
 - [How this connects to other pipeline components]

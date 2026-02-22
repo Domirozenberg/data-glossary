@@ -9,7 +9,7 @@ Browse the topics listed below.
 
 - [Data Replication](data-replication.md)
 - [Data Synchronization](data-synchronization.md)
-- [Elt](elt.md)
+- [Elt](elt.md) 🛠
 - [Etl Vs Elt](etl-vs-elt.md)
 - [Etl](etl.md)
 - [Etlt](etlt.md)

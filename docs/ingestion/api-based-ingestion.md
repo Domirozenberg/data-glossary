@@ -65,6 +65,10 @@ API-based ingestion follows this pattern:
 - **Use Webhooks**: Prefer webhooks over polling when available
 - **Document Integration**: Document API integration details
 
+## Products & Tools
+
+- **[Twilio](../tools-products/twilio.md)**: Communications platform with REST APIs for event logs, usage data, and messaging metadata
+
 ## Related Topics
 
 - [Webhook Ingestion](webhook-ingestion.md)

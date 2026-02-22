@@ -15,7 +15,7 @@ Browse the topics listed below.
 - [Loop Patterns](loop-patterns.md) 📝
 - [Parallel Execution](parallel-execution.md) 📝
 - [Pipeline Chaining](pipeline-chaining.md) 📝
-- [Pipeline Orchestration](pipeline-orchestration.md)
+- [Pipeline Orchestration](pipeline-orchestration.md) 🛠
 - [Pipeline Triggers](pipeline-triggers.md) 📝
 - [Retry Strategies](retry-strategies.md) 📝
 - [Sequential Execution](sequential-execution.md) 📝

@@ -60,6 +60,7 @@ nav:
   - Conversational Analytics: conversational-analytics/index.md
   - Analytics & BI: analytics/index.md
   - Cross-cutting: cross-cutting/index.md
+  - Tools & Products: tools-products/index.md
   - Version Control: version-control/index.md
 
 markdown_extensions:
