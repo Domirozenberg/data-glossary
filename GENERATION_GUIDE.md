@@ -60,13 +60,12 @@ When you generate a topic using `generate-topic.sh`, it automatically:
 
 If you have existing topic files that aren't marked, run the sync script:
 ```bash
-./sync-topic-status.sh
+./scripts/maintenance/sync-topic-status.sh
 ```
 
 This script:
-- Scans all existing topic files
-- Updates `TOPICS.md` to mark them as `[x]`
-- Updates `INDEX.md` to add links
+- Scans all existing topic files under docs/
+- Updates `docs/TOPICS.md` to mark them as `[x]`
 
 **Note:** The bulk generator (`generate-topics.py`) automatically skips topics that already have files, so you can safely run it without overwriting existing content.
 
@@ -77,11 +76,11 @@ This script:
 The glossary includes tools to analyze and understand topic file structures:
 
 ```bash
-# Analyze a topic file's structure
-./analyze-topic-structure.sh <file-path>
+# Analyze a topic file's structure (or use fill-topic.sh which does this for you)
+./scripts/maintenance/fill-topic.sh docs/<category>/<topic>.md
 
 # Example:
-./analyze-topic-structure.sh ai-ml/model-training-pipelines.md
+./scripts/maintenance/fill-topic.sh docs/ai-ml/model-training-pipelines.md
 ```
 
 This outputs JSON showing:
@@ -96,41 +95,41 @@ This outputs JSON showing:
 Generate a single topic file:
 
 ```bash
-./generate-topic.sh <category> <topic-name> <title>
+./scripts/maintenance/generate-topic.sh <category> <topic-name> <title>
 ```
 
 **Examples:**
 ```bash
 # AI/ML topics
-./generate-topic.sh ai-ml model-training-pipelines "Model Training Pipelines"
-./generate-topic.sh ai-ml model-inference-pipelines "Model Inference Pipelines"
-./generate-topic.sh ai-ml model-serving "Model Serving"
-./generate-topic.sh ai-ml feature-stores "Feature Stores"
+./scripts/maintenance/generate-topic.sh ai-ml model-training-pipelines "Model Training Pipelines"
+./scripts/maintenance/generate-topic.sh ai-ml model-inference-pipelines "Model Inference Pipelines"
+./scripts/maintenance/generate-topic.sh ai-ml model-serving "Model Serving"
+./scripts/maintenance/generate-topic.sh ai-ml feature-stores "Feature Stores"
 
 # Transformation topics
-./generate-topic.sh transformation data-aggregation "Data Aggregation"
-./generate-topic.sh transformation data-enrichment "Data Enrichment"
-./generate-topic.sh transformation data-deduplication "Data Deduplication"
+./scripts/maintenance/generate-topic.sh transformation data-aggregation "Data Aggregation"
+./scripts/maintenance/generate-topic.sh transformation data-enrichment "Data Enrichment"
+./scripts/maintenance/generate-topic.sh transformation data-deduplication "Data Deduplication"
 
 # Modeling topics
-./generate-topic.sh modeling star-schema "Star Schema"
-./generate-topic.sh modeling snowflake-schema "Snowflake Schema"
-./generate-topic.sh modeling fact-tables "Fact Tables"
+./scripts/maintenance/generate-topic.sh modeling star-schema "Star Schema"
+./scripts/maintenance/generate-topic.sh modeling snowflake-schema "Snowflake Schema"
+./scripts/maintenance/generate-topic.sh modeling fact-tables "Fact Tables"
 
 # Quality topics
-./generate-topic.sh quality data-accuracy "Data Accuracy"
-./generate-topic.sh quality data-completeness "Data Completeness"
-./generate-topic.sh quality data-consistency "Data Consistency"
+./scripts/maintenance/generate-topic.sh quality data-accuracy "Data Accuracy"
+./scripts/maintenance/generate-topic.sh quality data-completeness "Data Completeness"
+./scripts/maintenance/generate-topic.sh quality data-consistency "Data Consistency"
 
 # Analytics topics
-./generate-topic.sh analytics predictive-analytics "Predictive Analytics"
-./generate-topic.sh analytics self-service-analytics "Self-service Analytics"
-./generate-topic.sh analytics real-time-analytics "Real-time Analytics"
+./scripts/maintenance/generate-topic.sh analytics predictive-analytics "Predictive Analytics"
+./scripts/maintenance/generate-topic.sh analytics self-service-analytics "Self-service Analytics"
+./scripts/maintenance/generate-topic.sh analytics real-time-analytics "Real-time Analytics"
 ```
 
 **Command Format:**
 ```bash
-./generate-topic.sh <category> <topic-name> <title>
+./scripts/maintenance/generate-topic.sh <category> <topic-name> <title>
 ```
 
 Where:
@@ -184,14 +183,14 @@ Then ask: "Fill in the content for @conversational-analytics/LLM-based-data-disc
 
 **Option 2: Use Fill Helper Script**
 ```bash
-./fill-topic.sh <category>/<topic-name>.md
+./scripts/maintenance/fill-topic.sh docs/<category>/<topic-name>.md
 # This analyzes the structure and shows you the exact prompt to use
 ```
 
 **Option 2b: Check Which Sections Need Filling**
 ```bash
-./detect-empty-sections.sh <category>/<topic-name>.md
-# This shows which sections are empty or have placeholders
+./scripts/maintenance/fill-topic.sh docs/<category>/<topic-name>.md
+# This shows structure and which sections are empty or have placeholders
 ```
 
 **Option 3: Manual Editing**
@@ -205,19 +204,19 @@ You can customize the structure of any topic file by:
 - Renaming sections to better fit the topic
 - Reordering sections
 
-When you ask the AI to fill content, it will automatically detect and respect your custom structure. The `generate-topic.sh` script will also show the file structure when creating or overwriting files.
+When you ask the AI to fill content, it will automatically detect and respect your custom structure. The `scripts/maintenance/generate-topic.sh` script will also show the file structure when creating or overwriting files.
 
 ### Option 2: Bulk Generator (Python Script)
 
 Generate all remaining topics from TOPICS.md:
 
 ```bash
-python3 generate-topics.py TOPICS.md
+python3 scripts/maintenance/generate-topics.py docs/TOPICS.md
 ```
 
 Or specify a different topics file:
 ```bash
-python3 generate-topics.py TOPICS.md
+python3 scripts/maintenance/generate-topics.py docs/TOPICS.md
 ```
 
 The script will:
@@ -382,7 +381,7 @@ Before considering a topic complete:
 
 1. **Sync existing files** (if you have files that aren't marked):
    ```bash
-   ./sync-topic-status.sh
+   ./scripts/maintenance/sync-topic-status.sh
    ```
    This will update TOPICS.md and INDEX.md for all existing files.
 
@@ -391,7 +390,7 @@ Before considering a topic complete:
    **Option A: Individual topics**
    ```bash
    # Example: Generate an AI/ML topic
-   ./generate-topic.sh ai-ml model-inference-pipelines "Model Inference Pipelines"
+   ./scripts/maintenance/generate-topic.sh ai-ml model-inference-pipelines "Model Inference Pipelines"
    
    # This automatically:
    # - Creates: ai-ml/model-inference-pipelines.md
@@ -401,7 +400,7 @@ Before considering a topic complete:
    
    **Option B: Bulk generation**
    ```bash
-   python3 generate-topics.py TOPICS.md
+   python3 scripts/maintenance/generate-topics.py docs/TOPICS.md
    ```
    This creates templates for all unchecked topics and updates status.
 

@@ -68,22 +68,21 @@ Two tools are provided to help generate topic files:
 ### Individual Topic Generator
 Generate a single topic file with template:
 ```bash
-./generate-topic.sh <category> <topic-name> <title>
+./scripts/maintenance/generate-topic.sh <category> <topic-name> <title>
 ```
 
 Example:
 ```bash
-./generate-topic.sh transformation data-aggregation "Data Aggregation"
+./scripts/maintenance/generate-topic.sh transformation data-aggregation "Data Aggregation"
 ```
 
 **Automatically updates:**
-- ✅ Marks topic as `[x]` in `TOPICS.md`
-- ✅ Adds link in `INDEX.md`
+- ✅ Marks topic as `[x]` in `docs/TOPICS.md`
 
 ### Bulk Topic Generator
-Generate all remaining topics from TOPICS.md:
+Generate all remaining topics from docs/TOPICS.md:
 ```bash
-python3 generate-topics.py TOPICS.md
+python3 scripts/maintenance/generate-topics.py docs/TOPICS.md
 ```
 
 This will create template files for all unchecked topics in TOPICS.md and automatically update status.
@@ -91,7 +90,7 @@ This will create template files for all unchecked topics in TOPICS.md and automa
 ### Sync Existing Files
 If you have existing files that aren't marked, sync their status:
 ```bash
-./sync-topic-status.sh
+./scripts/maintenance/sync-topic-status.sh
 ```
 
 See `GENERATION_GUIDE.md` for detailed instructions and writing guidelines.

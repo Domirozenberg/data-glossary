@@ -1,14 +1,15 @@
 #!/bin/bash
 
-# Data Pipeline Glossary - Topic Structure Analyzer
+# Data Pipeline Glossary - Topic Structure Analyzer (internal helper)
 # Analyzes a topic file to detect its structure (sections, placeholders, etc.)
 # Outputs JSON with structure information for use by AI filling scripts
+# Used by fill-topic.sh and generate-topic.sh. Not intended for direct use.
 
 FILE_PATH=$1
 
 if [ -z "$FILE_PATH" ] || [ ! -f "$FILE_PATH" ]; then
     echo "Usage: $0 <file-path>"
-    echo "Example: $0 ai-ml/model-training-pipelines.md"
+    echo "Example: $0 docs/ai-ml/model-training-pipelines.md"
     exit 1
 fi
 

@@ -7,7 +7,7 @@ then updates each file's Related Topics section.
 import re
 from pathlib import Path
 
-DOCS = Path(__file__).resolve().parent.parent / "docs"
+DOCS = Path(__file__).resolve().parent.parent.parent / "docs"
 
 # Aliases for Related Topics that don't have an exact doc title match (phrase -> path under docs/)
 RELATED_TOPIC_ALIASES: dict[str, str] = {

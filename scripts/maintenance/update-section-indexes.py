@@ -5,7 +5,7 @@
 import re
 from pathlib import Path
 
-DOCS = Path(__file__).resolve().parent.parent / "docs"
+DOCS = Path(__file__).resolve().parent.parent.parent / "docs"
 SECTION_DIRS = [
     "architecture", "ingestion", "storage", "databases", "patterns",
     "transformation", "modeling", "quality", "orchestration", "formats",

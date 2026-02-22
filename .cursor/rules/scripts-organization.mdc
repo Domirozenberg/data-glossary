@@ -1,0 +1,40 @@
+---
+description: Where and how to create scripts in this project
+globs: scripts/**/*
+alwaysApply: true
+---
+
+# Script Organization Rules
+
+When creating new scripts for this project, follow these conventions.
+
+## Location
+
+All scripts live under `scripts/`. Never create scripts in the project root.
+
+## Two Categories
+
+### `scripts/maintenance/` — User-facing scripts
+
+- Scripts the user runs to update or maintain the project
+- Must be documented in `scripts/README.md`
+- Examples: generate topics, sync status, fill content, update indexes
+
+### `scripts/internal/` — Helper scripts
+
+- Scripts used only by other scripts or by the AI during tasks
+- Not intended for direct user invocation
+- Add a comment at the top: "Not intended for direct use"
+- Examples: analyze structure, detect empty sections
+
+## Conventions
+
+1. **Paths**: Use `docs/` for all topic files and `docs/TOPICS.md`. Resolve project root from the script location:
+   - Python: `Path(__file__).resolve().parent.parent.parent / "docs"` (for scripts in `scripts/maintenance/` or `scripts/internal/`)
+   - Shell: `SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"` and `PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"`
+
+2. **Execution**: Scripts assume they are run from the **project root**.
+
+3. **Cross-references**: Maintenance scripts that call internal scripts use `$SCRIPT_DIR/../internal/<script>`.
+
+4. **Documentation**: When adding a new maintenance script, add it to the table in `scripts/README.md` with its purpose and usage example.

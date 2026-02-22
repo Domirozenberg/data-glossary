@@ -1,23 +1,37 @@
 #!/bin/bash
 
 # Data Pipeline Glossary - Topic Filler Helper
-# This script helps prepare information for AI to fill topic content
-# It analyzes the file structure and provides guidance
+# Prepares information for AI to fill topic content.
+# Run from project root: ./scripts/maintenance/fill-topic.sh docs/ai-ml/model-training-pipelines.md
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+INTERNAL="$SCRIPT_DIR/../internal"
 
 FILE_PATH=$1
 
-if [ -z "$FILE_PATH" ] || [ ! -f "$FILE_PATH" ]; then
+if [ -z "$FILE_PATH" ]; then
     echo "Usage: $0 <file-path>"
-    echo "Example: $0 ai-ml/model-training-pipelines.md"
+    echo "Example: $0 docs/ai-ml/model-training-pipelines.md"
+    exit 1
+fi
+
+# Resolve path relative to project root
+if [[ "$FILE_PATH" != /* ]]; then
+    FILE_PATH="$PROJECT_ROOT/$FILE_PATH"
+fi
+
+if [ ! -f "$FILE_PATH" ]; then
+    echo "Error: File not found: $FILE_PATH"
     exit 1
 fi
 
 echo "📋 Analyzing structure of: $FILE_PATH"
 echo ""
-./analyze-topic-structure.sh "$FILE_PATH"
+"$INTERNAL/analyze-topic-structure.sh" "$FILE_PATH"
 echo ""
 echo "📝 Sections that need filling:"
-./detect-empty-sections.sh "$FILE_PATH"
+"$INTERNAL/detect-empty-sections.sh" "$FILE_PATH"
 echo ""
 echo "🤖 To fill this file, ask the AI assistant:"
 echo "   'Fill in the content for @$FILE_PATH based on the structure'"

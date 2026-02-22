@@ -71,14 +71,14 @@ class SectionIndexUpdaterPlugin(BasePlugin):
 
     def on_pre_build(self, config, **kwargs):
         project_root = Path(__file__).resolve().parent.parent
-        scripts_dir = project_root / "scripts"
+        maintenance_dir = project_root / "scripts" / "maintenance"
         _run_script(
             project_root,
             "Section indexes (Products & Tools marks)",
-            scripts_dir / "update-section-indexes.py",
+            maintenance_dir / "update-section-indexes.py",
         )
         _run_script(
             project_root,
             "Related topics linking",
-            scripts_dir / "link-related-topics.py",
+            maintenance_dir / "link-related-topics.py",
         )
