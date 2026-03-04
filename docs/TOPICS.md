@@ -254,6 +254,7 @@
 - [x] Data Ownership
 - [x] Data Stewardship
 - [x] Data Privacy
+- [x] Naming Convention
 
 ### Compliance & Security
 - [x] Data Encryption (at rest, in transit)
@@ -433,6 +434,8 @@
 - [x] Apache Airflow
 - [x] Nimbalyst
 - [x] Twilio
+- [x] Supabase
+- [x] Vercel
 
 ## Version Control & Git
 
